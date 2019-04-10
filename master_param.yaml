@@ -1,0 +1,23 @@
+mt:
+  master_param:
+    ransac:
+      fitness_threshold: 0.8
+      max_iteration: 40000
+      max_validation: 500
+    icp:
+      fitness_threshold: 0.6
+      translation_threshold: 
+        upper_x: 0.0
+        lower_x: 0.0
+        upper_y: 0.0
+        lower_y: 0.0
+        upper_z: 0.0
+        lower_z: 0.0
+      rotation_euler_threshold:
+        upper_a: 0.0
+        lower_a: 0.0
+        upper_b: 0.0
+        lower_b: 0.0
+        upper_c: 0.0
+        lower_c: 0.0
+    algor: '1'

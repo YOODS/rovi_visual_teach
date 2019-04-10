@@ -1,0 +1,138 @@
+"Title:","マスターティーチ画面"
+
+
+### レシピID指定パラメータ
+"Title:","レシピID(マスター登録、マスター削除、マスターティーチの対象となるレシピID)"
+"Number:/mt/recipe","レシピID"
+
+
+### マスター登録用パラメータ
+"Title:","マスター登録パラメータ"
+"Title:","       RANSACパラメータ"
+"Number:/mt/master_param/ransac/fitness_threshold","ransacを終了するfitness閾値"
+"Number:/mt/master_param/ransac/max_iteration","反復の最大回数"
+"Number:/mt/master_param/ransac/max_validation","検証ステップの最大数"
+"Title:","       ICPパラメータ"
+"Title:","              一致率閾値(この値未満の場合はNGを返す" 
+"Number:/mt/master_param/icp/fitness_threshold","一致率閾値"
+"Title:","              座標閾値(検出位置が閾値を超過または閾値未満の場合はNGを返す)"
+"Number:/mt/master_param/icp/translation_threshold/upper_x","X座標上限"
+"Number:/mt/master_param/icp/translation_threshold/lower_x","X座標下限"
+"Number:/mt/master_param/icp/translation_threshold/upper_y","Y座標上限"
+"Number:/mt/master_param/icp/translation_threshold/lower_y","Y座標下限"
+"Number:/mt/master_param/icp/translation_threshold/upper_z","Z座標上限"
+"Number:/mt/master_param/icp/translation_threshold/lower_z","Z座標下限"
+"Title:","              回転閾値(検出位置が閾値を超過または閾値未満の場合はNGを返す)"
+"Number:/mt/master_param/icp/rotation_euler_threshold/upper_a","X回転上限"
+"Number:/mt/master_param/icp/rotation_euler_threshold/lower_a","X回転下限"
+"Number:/mt/master_param/icp/rotation_euler_threshold/upper_b","Y回転上限"
+"Number:/mt/master_param/icp/rotation_euler_threshold/lower_b","Y回転下限"
+"Number:/mt/master_param/icp/rotation_euler_threshold/upper_c","Z回転上限"
+"Number:/mt/master_param/icp/rotation_euler_threshold/lower_c","Z回転下限"
+"Title:","       マッチングアルゴリズム(現状は1のみ)"
+"Number:/mt/master_param/algor","マッチングアルゴリズム"
+
+
+### cropperパラメータ
+"Title:","クロップパラメータ"
+"Title:","      Z方向クロップパラメータ"
+"Number:/cropper/zcrop/near","クロップ位置(カメラ側)"
+"Number:/cropper/zcrop/far","クロップ位置(床側)"
+"Title:","      XY平面円クロップパラメータ"
+"Number:/cropper/sphere/x","円の中心X座標"
+"Number:/cropper/sphere/y","円の中心Y座標"
+"Number:/cropper/sphere/r","円の半径"
+"Title:","      voxel化パラメータ(撮像で得た点群を指定間隔で間引く)"
+"Number:/cropper/voxel","voxel化パラメータ(mm)"
+"Title:","      出力座標系パラメータ(1～6、現状は6のみ実装)"
+"Title:","           1: カメラ(固定)     ワーク(固定)     出力座標系(カメラ)"
+"Title:","           2: カメラ(ロボット) ワーク(固定)     出力座標系(カメラ)"
+"Title:","           3: カメラ(固定)     ワーク(ロボット) 出力座標系(ロボット)"
+"Title:","           4: カメラ(ロボット) ワーク(ロボット) 出力座標系(ロボット)"
+"Title:","           5: カメラ(固定)     ワーク(固定)     出力座標系(ロボット)"
+"Title:","           6: カメラ(ロボット) ワーク(固定)     出力座標系(ロボット)"
+"Number:/cropper/frame_id","出力座標系"
+
+### UIのみで撮像する場合のダミー撮像位置
+"Title:","ダミー撮像位置(ロボットが接続されていない場合のテスト用)"
+"Title:","       座標"
+"Number:/cropper/dummy_tf/translation/x","X座標"
+"Number:/cropper/dummy_tf/translation/y","Y座標"
+"Number:/cropper/dummy_tf/translation/z","Z座標"
+"Title:","       回転(オイラー角)"
+"Number:/cropper/dummy_tf/rotation/x","X軸"
+"Number:/cropper/dummy_tf/rotation/y","Y軸"
+"Number:/cropper/dummy_tf/rotation/z","Z軸"
+
+
+### 登録済みマスターパラメータ
+"Title:","現在選択されているマスター(レシピ選択されたマスター)"
+"Title:","       クロップパラメータ"
+"Title:","             Z方向クロップパラメータ"
+"Number:/mt/master/cropper/zcrop/near","クロップ位置(カメラ側)"
+"Number:/mt/master/cropper/zcrop/far","クロップ位置(床側)"
+"Title:","             XY平面円クロップパラメータ"
+"Number:/mt/master/cropper/sphere/x","円の中心X座標"
+"Number:/mt/master/cropper/sphere/y","円の中心Y座標"
+"Number:/mt/master/cropper/sphere/r","円の半径"
+"Title:","             voxel化パラメータ(撮像で得た点群を指定間隔で間引く)"
+"Number:/mt/master/cropper/voxel","voxel化パラメータ(mm)"
+"Title:","             出力座標系パラメータ(1～6、現状は6のみ実装)"
+"Number:/mt/master/cropper/frame_id","出力座標系"
+"Title:","       RANSACパラメータ"
+"Number:/mt/master/ransac/fitness_threshold","ransacを終了するfitness閾値"
+"Number:/mt/master/ransac/max_iteration","反復の最大回数"
+"Number:/mt/master/ransac/max_validation","検証ステップの最大数"
+"Title:","       ICPパラメータ"
+"Title:","              一致率閾値(この値未満の場合はNGを返す" 
+"Number:/mt/master/icp/fitness_threshold","一致率閾値"
+"Title:","              座標閾値(検出位置が閾値を超過または閾値未満の場合はNGを返す)"
+"Number:/mt/master/icp/translation_threshold/upper_x","X座標上限"
+"Number:/mt/master/icp/translation_threshold/lower_x","X座標下限"
+"Number:/mt/master/icp/translation_threshold/upper_y","Y座標上限"
+"Number:/mt/master/icp/translation_threshold/lower_y","Y座標下限"
+"Number:/mt/master/icp/translation_threshold/upper_z","Z座標上限"
+"Number:/mt/master/icp/translation_threshold/lower_z","Z座標下限"
+"Title:","              回転閾値(検出位置が閾値を超過または閾値未満の場合はNGを返す)"
+"Number:/mt/master/icp/rotation_euler_threshold/upper_a","X回転上限"
+"Number:/mt/master/icp/rotation_euler_threshold/lower_a","X回転下限"
+"Number:/mt/master/icp/rotation_euler_threshold/upper_b","Y回転上限"
+"Number:/mt/master/icp/rotation_euler_threshold/lower_b","Y回転下限"
+"Number:/mt/master/icp/rotation_euler_threshold/upper_c","Z回転上限"
+"Number:/mt/master/icp/rotation_euler_threshold/lower_c","Z回転下限"
+"Title:","       マッチングアルゴリズム(現状は1のみ)"
+"Number:/mt/master/algor","マッチングアルゴリズム"
+"Title:","       カメラパラメータ"
+"Number:/mt/master/camera/exposure_time","露光時間"
+"Number:/mt/master/camera/gain","ゲイン"
+"Title:","       プロジェクターパラメータ"
+"Number:/mt/master/projector/exposure_time","露光時間"
+"Number:/mt/master/projector/intencity","発光強度"
+"Number:/mt/master/projector/interval","発光間隔(ms)"
+
+
+### パブリッシャー
+"Title:","撮像"
+"Publisher:/clear","シーンクリア",False
+"Publisher:/cropper/dummy_euler","撮像位置(ダミー撮像位置の通知)",False
+"Publisher:/solver/capture","撮像",False
+"Title:","クロップパラメータ初期化"
+"Publisher:/cropper/zcrop/set","Z方向クロップパラメータ初期化",False
+"Publisher:/cropper/sphere/set","XY平面円クロップパラメータ初期化",False
+"Title:","マスター登録"
+"Publisher:/mt/regMaster","マスター登録",False
+"Title:","レシピ選択(レシピIDに対応したマスターを処理対象に選択する)"
+"Publisher:/mt/recipe","レシピ選択",False
+"Title:","マスターティーチ"
+"Publisher:/mt/master_teach","マスターティーチ",False
+"Title:","マスター削除(レシピIDに対応したマスターを削除する)"
+"Publisher:/mt/remMaster","マスター削除",False
+"Title:","オフライン再現試験(debug_dataフォルダ配下の点群ファイルで再現試験を実施する)"
+"Publisher:/finder/offlinetest","オフライン再現試験",False
+
+
+### エラーコード及びメッセージ
+"Title:","処理結果"
+"Echo:/solver/error","エラーコード"
+"Echo:/solver/message","メッセージ"
+

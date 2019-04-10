@@ -1,0 +1,29 @@
+<launch>
+  <env name="ROVI_PATH" value="$(find rovi)" />
+
+  <!-- parameter file -->
+  <rosparam command="load" ns="/" file="$(find rovi_master_teach)/param.yaml" />
+  <rosparam command="load" ns="/" file="$(find rovi_master_teach)/master_param.yaml" />
+  <rosparam command="load" ns="/" file="$(env HOME)/.ros/rcalib.yaml" />
+
+  <!-- robot tf -->
+  <node ns="/robot" pkg="tf" type="static_transform_publisher" name="camera_to_world" args="-0.4 0.3 0.30 -1.57 0 3.14 camera world 10" />
+
+  <!-- solver -->
+  <node ns="/mt" pkg="rovi_master_teach" type="masterteach_solver.py" name="master_teach" output="screen" >
+     <remap from="/mt/source/scene/floats" to="/cropper/cropped_scene/floats" />
+     <remap from="/mt/source/tf" to="/cropper/source/tf" />
+     <remap from="/mt/icpresult/rt" to="/finder/icpresult/rt" />
+     <remap from="/mt/message" to="/finder/message" />
+     <remap from="/mt/error" to="/finder/error" />
+     <remap from="/mt/reset" to="/finder/reset" />
+  </node>
+
+  <!-- socket -->
+  <node pkg="rovi_master_teach" type="masterteach_socket.js" name="master_teach_socket" args="Mitsubishi" output="screen" />
+
+  <!-- このログは社内デバッグ用（Mitsubishiのロボットとの接続確認用に使っていた）
+  <node pkg="rovi_master_teach" type="masterteach_socket_log.js" name="master_teachsocket_log" output="screen" />
+  -->
+</launch>
+
