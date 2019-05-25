@@ -4,7 +4,7 @@
 - 範囲は、Industrial Robot I/F,Searcher,Cropperの管理と、それらのUI(rqt_param_manager)
 - 点群表示出力(○:要,×:不要)
 
-|分類|本来の座標系|変換座標系|
+|分類|本来の座標系|取り得る座標系|
 |:----|:----|:----|
 |モデル点群|×master/camera|○capture/camera<br>○world|
 |モデル点群(移動後)|-|○capture/camera<br>○world|
@@ -16,7 +16,7 @@
 
 - !!TMCバリエーション!!
 
-|分類|本来の座標系|表示の座標系|
+|分類|本来の座標系|取り得る座標系|
 |:----|:----|:----|
 |モデル点群|×master/flange|○capture/flange|
 |モデル点群(移動後)|-|○capture/flange|
