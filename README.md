@@ -1,7 +1,28 @@
 ## MasterTeach
 
-- デフォルト名前空間：/mt  ※以下のTopic、Parameterで先頭に"/"がついていないものは、/mt/が付いているものとみなす。
-- Industrial Robot I/F,rqt_param_managerと、Finder,Cropperとの橋渡し処理を行う。
+### 要件
+- 範囲は、Industrial Robot I/F,Searcher,Cropperの管理と、それらのUI(rqt_param_manager)
+- 点群表示出力(○:要,×:不要)
+
+|分類|本来の座標系|変換座標系|
+|:----|:----|:----|
+|モデル点群|×master/camera|○capture/camera<br>○world|
+|モデル点群(移動後)|-|○capture/camera<br>○world|
+|シーン点群|○capure/camera|○world|
+
+- 出力座標系はcapure/cameraとworldで切り替える
+- searcherが出す点群座標系はcapture/cameraのみでよい
+- float2pcに座標変換機能を追加する
+
+- !!TMCバリエーション!!
+
+|分類|本来の座標系|表示の座標系|
+|:----|:----|:----|
+|モデル点群|×master/flange|○capture/flange|
+|モデル点群(移動後)|-|○capture/flange|
+|シーン点群|○capure/flange||
+
+- searcherはcapure/flange(==master/flange)で出し、表示もこれのみでよい。
 
 ### 処理の定義  
 
