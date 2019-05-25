@@ -11,8 +11,7 @@
 |シーン点群|○capure/camera|○world|
 
 - 出力座標系はcapure/cameraとworldで切り替える
-- searcherが出す点群座標系はcapture/cameraのみでよい
-- float2pcに座標変換機能を追加する
+- searcherはcapture/cameraで処理し、float2pcで座標変換する(機能追加)
 
 - !!TMCバリエーション!!
 
@@ -22,7 +21,7 @@
 |モデル点群(移動後)|-|○capture/flange|
 |シーン点群|○capure/flange||
 
-- searcherはcapure/flange(==master/flange)で出し、表示もこれのみでよい。
+- searcherはcapure/flange(==master/flange)で処理し、表示もこれのみでよい
 
 ### 処理の定義  
 
