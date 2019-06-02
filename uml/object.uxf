@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="UTF-8"?><diagram program="umlet" version="13.3">
+  <zoom_level>8</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>480</x>
+      <y>256</y>
+      <w>168</w>
+      <h>264</h>
+    </coordinates>
+    <panel_attributes>:Searcher
+--
+&lt;&lt;subscriber&gt;&gt;
+in/floats[]
+model_load
+model_save
+solve
+--
+&lt;&lt;pubisher&gt;&gt;
+model/floats[]
+scene/floats[]
+model_loaded
+solved
+camera/master:TF
+search[]:TF
+--
+&lt;&lt;param/args&gt;&gt;
+input:frame_id
+path: path_to_model*.ply</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>376</x>
+      <y>312</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1..n</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>472</x>
+      <y>568</y>
+      <w>184</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>:Solver
+--
+learn(floats[],params)
+transform[] solve(floats[],params)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>512</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;70.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>256</y>
+      <w>168</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>plane:Cropper(*)
+--
+&lt;&lt;subscriber&gt;&gt;
+in/floats
+clear
+capture
+--
+&lt;&lt;pubisher&gt;&gt;
+out/floats
+cleared
+captured
+camera/capture:TF
+flange/capture:TF
+--
+&lt;&lt;param/args&gt;&gt;
+input:frame_id
+output:flame_id
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>560</x>
+      <y>200</y>
+      <w>24</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>40</x>
+      <y>280</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>100.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>304</x>
+      <y>72</y>
+      <w>168</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>scene:Floats2pc
+--
+&lt;&lt;subscriber&gt;&gt;
+in/floats
+--
+&lt;&lt;pubisher&gt;&gt;
+out/pc:PointCloud
+--
+&lt;&lt;param/args&gt;&gt;
+input:frame_id
+output:frame_id</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>200</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>0</x>
+      <y>272</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>from sensor</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>520</x>
+      <y>184</y>
+      <w>96</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>from/to storage</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>336</x>
+      <y>304</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>out-in/floats[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>312</y>
+      <w>104</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>712</x>
+      <y>304</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>model/floats[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>312</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>672</x>
+      <y>72</y>
+      <w>168</w>
+      <h>136</h>
+    </coordinates>
+    <panel_attributes>model:Floats2pc
+--
+&lt;&lt;subscriber&gt;&gt;
+in/floats
+--
+&lt;&lt;pubisher&gt;&gt;
+out/pc:PointCloud
+--
+&lt;&lt;param/args&gt;&gt;
+input:frame_id
+output:frame_id</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>744</x>
+      <y>200</y>
+      <w>24</w>
+      <h>128</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLInterface</id>
+    <coordinates>
+      <x>712</x>
+      <y>352</y>
+      <w>80</w>
+      <h>48</h>
+    </coordinates>
+    <panel_attributes>scene/floats[]</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>640</x>
+      <y>360</y>
+      <w>120</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1..n
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>904</x>
+      <y>288</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>:rqt_param_manager
+--
+bg=orange
+試用中
+未実装機能あり</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>904</x>
+      <y>216</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>:tf_config(*)
+--
+bg=orange
+試用中</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>904</x>
+      <y>360</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>:recipe manager
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>904</x>
+      <y>432</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>:launch manager
+--
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>904</x>
+      <y>144</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>:r-calib(*)
+--
+bg=orange
+連動確認中(UR)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>904</x>
+      <y>72</y>
+      <w>144</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>:rovi_industrial
+--
+bg=orange
+産ロボ用ソケット
+確認中</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>104</x>
+      <y>72</y>
+      <w>112</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>Note..
+(*):実装完
+(**):リリース</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>120</x>
+      <y>488</y>
+      <w>168</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>marker:Cropper(*)
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>280</x>
+      <y>320</y>
+      <w>112</w>
+      <h>240</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;270.0;120.0;270.0;120.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>528</x>
+      <y>8</y>
+      <w>88</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>Viewer
+既存</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>368</x>
+      <y>32</y>
+      <w>216</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>250.0;10.0;250.0;30.0;10.0;30.0;10.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>568</x>
+      <y>32</y>
+      <w>192</w>
+      <h>56</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;30.0;220.0;30.0;220.0;50.0</additional_attributes>
+  </element>
+</diagram>

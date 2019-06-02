@@ -1,3 +1,0 @@
-<launch>
-  <node ns="rovi" name="masterteach" pkg="rqt_param_manager" type="rqt_param_manager" args="conf:=$(find rovi_master_teach)/masterteach.pmconf col_label_width:=200 window_size:=650x900" output="screen" />
-</launch>
