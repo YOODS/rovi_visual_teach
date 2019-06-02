@@ -11,3 +11,6 @@ config:
     source_frame_id: "camera/capture"
     frame_id: "camera/capture0"
     relay: "/filer/load"
+  picker:
+    start_frame_id: "master/camera0"
+    goal_frame_id: "solve"

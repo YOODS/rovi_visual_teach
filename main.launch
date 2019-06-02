@@ -26,6 +26,7 @@
   </node>
   <node pkg="rovi_utils" type="searcher.py" name="" args="path:=$(find rovi_master_teach)/recipe" output="screen">
     <remap from="~config" to="/config/searcher" />
+    <remap from="~" to="/searcher" />
     <remap from="~in/surface/floats" to="/scene/surface/floats" />
     <remap from="~master/surface/floats" to="/master/surface/floats" />
     <remap from="~clear" to="/request/clear" />
@@ -33,6 +34,15 @@
     <remap from="~loaded" to="/request/model_loaded" />
     <remap from="~save" to="/request/model_save" />
     <remap from="~solve" to="/request/solve" />
+    <remap from="~solved" to="/searcher/solved" />
+    <remap from="~score" to="/searcher/score" />
+  </node>
+  <node pkg="rovi_utils" type="picker.py" name="" output="screen">
+    <remap from="~config" to="/config/picker" />
+    <remap from="~" to="/picker" />
+    <remap from="~clear" to="/request/clear" />
+    <remap from="~solve" to="/searcher/solved" />
+    <remap from="~score" to="/searcher/score" />
     <remap from="~solved" to="/response/solved" />
   </node>
 
