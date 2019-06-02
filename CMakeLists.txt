@@ -5,7 +5,7 @@ find_package(catkin REQUIRED)
 
 catkin_package()
 
-catkin_python_setup()
+#catkin_python_setup()
 
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations

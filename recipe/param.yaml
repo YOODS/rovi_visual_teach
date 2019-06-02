@@ -1,0 +1,15 @@
+rovi:
+  live:
+    camera:
+      ExposureTime: 300000
+      Gain: 50
+  pshift_genpc:
+    camera:
+      ExposureTime: 8400
+      Gain: 0
+    projector:
+      Intencity: 255
+cropper:
+  cropR: 201
+  cropZ: 800
+  mesh: 1.0
