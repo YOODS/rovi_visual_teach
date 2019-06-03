@@ -15,7 +15,7 @@
 - ソルバー選択機能
 
 ### UML
-<img src="object.png" />
+<img src="uml/object.png" />
 
 ### Dependency
 - RoVIコア

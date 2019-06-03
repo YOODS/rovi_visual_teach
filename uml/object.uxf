@@ -25,8 +25,10 @@ camera/master:TF
 search[]:TF
 --
 &lt;&lt;param/args&gt;&gt;
-input:frame_id
-path: path_to_model*.ply</panel_attributes>
+scene_frame_id
+master_frame_id
+place_frame_id
+path(_to_recipe_folder)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -45,15 +47,15 @@ m2=1..n</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>472</x>
+      <x>480</x>
       <y>568</y>
-      <w>184</w>
+      <w>256</w>
       <h>72</h>
     </coordinates>
     <panel_attributes>:Solver
 --
 learn(floats[],params)
-transform[] solve(floats[],params)</panel_attributes>
+{transform:[],score:[]...}=solve(floats[],params)</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -260,12 +262,12 @@ m2=1</panel_attributes>
   <element>
     <id>UMLInterface</id>
     <coordinates>
-      <x>712</x>
+      <x>728</x>
       <y>352</y>
-      <w>80</w>
+      <w>48</w>
       <h>48</h>
     </coordinates>
-    <panel_attributes>scene/floats[]</panel_attributes>
+    <panel_attributes>score</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
@@ -277,14 +279,14 @@ m2=1</panel_attributes>
       <h>32</h>
     </coordinates>
     <panel_attributes>lt=-&gt;
-m1=1..n
+m1=1
 m2=1</panel_attributes>
     <additional_attributes>10.0;10.0;130.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>904</x>
+      <x>1048</x>
       <y>288</y>
       <w>144</w>
       <h>56</h>
@@ -299,7 +301,7 @@ bg=orange
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>904</x>
+      <x>1048</x>
       <y>216</y>
       <w>144</w>
       <h>56</h>
@@ -313,7 +315,7 @@ bg=orange
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>904</x>
+      <x>1048</x>
       <y>360</y>
       <w>144</w>
       <h>56</h>
@@ -326,7 +328,7 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>904</x>
+      <x>1048</x>
       <y>432</y>
       <w>144</w>
       <h>56</h>
@@ -339,7 +341,7 @@ bg=orange</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>904</x>
+      <x>1048</x>
       <y>144</y>
       <w>144</w>
       <h>56</h>
@@ -353,7 +355,7 @@ bg=orange
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>904</x>
+      <x>1048</x>
       <y>72</y>
       <w>144</w>
       <h>56</h>
@@ -437,5 +439,42 @@ m2=1</panel_attributes>
     </coordinates>
     <panel_attributes>lt=&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;30.0;220.0;30.0;220.0;50.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>832</x>
+      <y>256</y>
+      <w>168</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>:Picker
+--
+&lt;&lt;subscriber&gt;&gt;
+score:float[]
+solve
+--
+&lt;&lt;pubisher&gt;&gt;
+plan:Transform
+solved
+--
+&lt;&lt;param/args&gt;&gt;
+start_frame:
+goal_frame:
+  &lt;&lt;constraint..&gt;&gt;.</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>752</x>
+      <y>360</y>
+      <w>96</w>
+      <h>32</h>
+    </coordinates>
+    <panel_attributes>lt=-&gt;
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>
