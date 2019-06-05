@@ -1,0 +1,21 @@
+config_tf:
+  flange:
+    parent_frame_id: wrist_3_link
+  mount:
+    parent_frame_id: wrist_2_link
+  camera:
+    parent_frame_id: mount
+    transform:
+      rotation:
+        w: 1
+        x: 0
+        y: 0
+        z: 0
+      translation:
+        x: 0
+        y: 0
+        z: 0
+  wrist_3_link:
+    parent_frame_id: world
+  wrist_2_link:
+    parent_frame_id: world

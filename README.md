@@ -32,7 +32,7 @@ roslaunch rovi_master_teach main.launch
 ~~~
 roslaunch rovi_master_teach setup.launch
 ~~~
-- 使用する前に、**tf_config**での装置構成設定、**r-calib**でのキャリブレーションが必要です。
+- 使用する前に、**config_tf**での装置構成設定、**r-calib**でのキャリブレーションが必要です。
 - メッセージは当面(GUIが供用できるまで)は以下にてご確認ください。
 ~~~
 rostopic echo /message
