@@ -1,7 +1,7 @@
 <launch>
   <!--   TF configuation server (needed for every application)   -->
-  <rosparam command="load" file="$(find rovi_master_teach)/tf_config.yaml" />
-  <node pkg="rovi_utils" type="tf_config.py" name="tf_config" />
+  <rosparam command="load" file="$(find rovi_master_teach)/config_tf.yaml" output="screen" />
+  <node pkg="rovi_utils" type="config_tf.py" name="config_tf" />
 
   <!--   PointCloud publisher from file. For testing   -->
   <node pkg="rovi_utils" type="filer.py" name="filer" args="wd:=$(find rovi_utils)/searcher">
@@ -17,12 +17,13 @@
   <node pkg="rovi_utils" type="cropper.py" name="surface_cropper" output="screen">
     <remap from="~config" to="/config/cropper" />
     <remap from="~param" to="/cropper" />
+    <remap from="~update" to="/update/cropper" />
     <remap from="~capture" to="/request/capture" />
-    <remap from="~captured" to="/response/captured" />
+    <remap from="~captured" to="/response/capture" />
     <remap from="~clear" to="/request/clear" />
     <remap from="~in/floats" to="/rovi/ps_floats" />
     <remap from="~out/floats" to="/scene/surface/floats" />
-    <remap from="~update" to="/update/cropper" />
+    <remap from="~raw/floats" to="/scene/surface/raw/floats" />
   </node>
   <node pkg="rovi_utils" type="searcher.py" name="" args="path:=$(find rovi_master_teach)/recipe" output="screen">
     <remap from="~config" to="/config/searcher" />
@@ -31,7 +32,7 @@
     <remap from="~master/surface/floats" to="/master/surface/floats" />
     <remap from="~clear" to="/request/clear" />
     <remap from="~load" to="/request/model_load" />
-    <remap from="~loaded" to="/request/model_loaded" />
+    <remap from="~loaded" to="/response/model_load" />
     <remap from="~save" to="/request/model_save" />
     <remap from="~solve" to="/request/solve" />
     <remap from="~solved" to="/searcher/solved" />
@@ -43,7 +44,7 @@
     <remap from="~clear" to="/request/clear" />
     <remap from="~solve" to="/searcher/solved" />
     <remap from="~score" to="/searcher/score" />
-    <remap from="~solved" to="/response/solved" />
+    <remap from="~solved" to="/response/solve" />
   </node>
 
   <!--   PointColuds to show on RViz   -->
