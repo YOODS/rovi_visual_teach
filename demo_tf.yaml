@@ -1,10 +1,8 @@
 config_tf:
   flange:
     parent_frame_id: wrist_3_link
-  mount:
-    parent_frame_id: wrist_2_link
   camera:
-    parent_frame_id: mount
+    parent_frame_id: wrist_2_link
     transform:
       rotation:
         w: 1

@@ -1,6 +1,6 @@
 <launch>
   <!--   TF configuation server (needed for every application)   -->
-  <rosparam command="load" file="$(find rovi_utils)/config_tf.yaml" />
+  <rosparam command="load" file="$(find rovi_master_teach)/demo_tf.yaml" />
   <node pkg="rovi_utils" type="config_tf.py" name="config_tf" />
 
   <!--   PointCloud publisher from file. For testing   -->
@@ -24,6 +24,7 @@
     <remap from="~in/floats" to="/rovi/ps_floats" />
     <remap from="~out/floats" to="/scene/surface/floats" />
     <remap from="~raw/floats" to="/scene/surface/raw/floats" />
+    <remap from="/rovi/X1" to="/filer/load" />
   </node>
   <node pkg="rovi_utils" type="searcher.py" name="" args="path:=$(find rovi_master_teach)/recipe" output="screen">
     <remap from="~config" to="/config/searcher" />
