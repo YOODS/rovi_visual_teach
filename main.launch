@@ -54,19 +54,16 @@
     <remap from="update" to="/update/frame" />
     <remap from="floats" to="/scene/surface/floats" />
     <remap from="pc" to="/scene/surface/pc" />
-    <remap from="clear" to="/request/clear" />
   </node>
   <node pkg="rovi_utils" type="floats3pc" name="" args="camera/capture0 solve0" output="screen" >
     <remap from="update" to="/update/frame" />
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc0" />
-    <remap from="clear" to="/request/clear" />
   </node>
   <node pkg="rovi_utils" type="floats3pc" name="" args="camera/capture0 solve1" output="screen" >
     <remap from="update" to="/update/frame" />
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc1" />
-    <remap from="clear" to="/request/clear" />
   </node>
 
   <!--   Message logger  -->
