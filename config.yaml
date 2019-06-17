@@ -13,5 +13,5 @@ config:
     frame_id: "camera/capture0"
     relay: "/rovi/X1"
   picker:
-    start_frame_id: "master/camera0"
-    goal_frame_id: "solve"
+    frame_id: "pick"
+

@@ -14,6 +14,6 @@ config_tf:
         y: 0
         z: 0
   wrist_3_link:
-    parent_frame_id: world
+    parent_frame_id: wrist_2_link
   wrist_2_link:
     parent_frame_id: world

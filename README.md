@@ -1,8 +1,12 @@
-## MasterTeach
+# MasterTeach
 
-### 要件
-- 範囲は、Industrial Robot I/F,Searcher,Cropperの管理と、それらのUI(rqt_param_manager)
-- ３とおりの機器構成
+## 設計
+
+### ユースケース
+![usecase](uml/usecase.png)
+
+### 要件(ユースケース補足)
+- 3とおりの機器構成
 
 ||カメラ|対象物体|
 |:----|:----|:----|
@@ -14,13 +18,16 @@
 - 構成1でのマウントポイント指定(J6,J5...)
 - ソルバー選択機能
 
-### UML
-<img src="uml/object.png" />
+### オブジェクト図
+![object](uml/object.png)
 
-### Dependency
-- RoVIコア
-- RoVIユーティティ(cropper,searcher)
-- Rqt_parm_manager
+## 運用
+
+### 準備  
+以下をCheckoutしてBuildします。
+- [rovi(コア)](https://github.com/YOODS/rovi)
+- [rovi_utils(ユーティティ)](https://github.com/YOODS/rovi_utils)
+- [rqt_parm_manager(パラメータ編集ツール)](https://github.com/YOODS/rqt_param_manager)
 
 ### Launch  
 #### メイン
@@ -32,8 +39,8 @@ roslaunch rovi_master_teach main.launch
 ~~~
 roslaunch rovi_master_teach setup.launch
 ~~~
-- 使用する前に、**config_tf**での装置構成設定、**r-calib**でのキャリブレーションが必要です。
-- メッセージは当面(GUIが供用できるまで)は以下にてご確認ください。
-~~~
-rostopic echo /message
-~~~
+**使用する前に...**
+1. ロボットドライバーの起動
+2. [ロボットキャリブレーション](https://github.com/YOODS/rovi_utils/r-calib)  
+が必要です。
+
