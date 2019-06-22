@@ -1,6 +1,4 @@
 "Title:","マスターティーチメイン"
-"Title:","フレーム"
-"Text:/config/frame/frame_id","出力フレーム"
 "Title:","テスト"
 "Publisher:/request/model_load","マスター呼出"
 "Publisher:/request/model_save","マスター保存"

@@ -49,19 +49,19 @@
 
   <!--   PointColuds to show on RViz   -->
   <node pkg="rviz" type="rviz" name="" args="-d $(find rovi_master_teach)/main.rviz" />
-  <node pkg="rovi" type="param_watch.js" name="" args="/config/frame /update/frame" />
-  <node pkg="rovi_utils" type="floats3pc" name="" args="camera/capture0 camera/capture0" output="screen" >
-    <remap from="update" to="/update/frame" />
+  <node pkg="rovi" type="floats2pc" name="" args="camera/capture0">
     <remap from="floats" to="/scene/surface/floats" />
     <remap from="pc" to="/scene/surface/pc" />
   </node>
-  <node pkg="rovi_utils" type="floats3pc" name="" args="camera/capture0 solve0" output="screen" >
-    <remap from="update" to="/update/frame" />
+  <node pkg="rovi" type="floats2pc" name="" args="camera/capture0">
+    <remap from="floats" to="/master/surface/floats" />
+    <remap from="pc" to="/master/surface/pc" />
+  </node>
+  <node pkg="rovi" type="floats2pc" name="" args="solve0">
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc0" />
   </node>
-  <node pkg="rovi_utils" type="floats3pc" name="" args="camera/capture0 solve1" output="screen" >
-    <remap from="update" to="/update/frame" />
+  <node pkg="rovi" type="floats2pc" name="" args="solve1">
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc1" />
   </node>
