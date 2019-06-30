@@ -2,6 +2,8 @@
   <!--   TF configuation server (needed for every application)   -->
   <rosparam command="load" file="$(find rovi_master_teach)/demo_tf.yaml" />
   <node pkg="rovi_utils" type="config_tf.py" name="config_tf" output="screen" />
+  <!--   psedo robot driver  -->
+  <node pkg="tf" type="static_transform_publisher" name="" args="0.1 0.2 0 0 0 0 1 world wrist_2_link 1000" />
 
   <!--   PointCloud publisher from file. For testing   -->
   <node pkg="rovi_utils" type="filer.py" name="filer" args="wd:=$(find rovi_master_teach)">
@@ -10,7 +12,6 @@
 
   <!--   Main body of master teach   -->
   <rosparam command="load" file="$(find rovi_master_teach)/config.yaml" />
-  <rosparam command="load" file="$(find rovi_master_teach)/recipe/param.yaml" />
   <param name="/rovi/pshift_genpc/projector/Mode" type="int" value="1" />
   <param name="/rovi/live/camera/SoftwareTriggerRate" type="int" value="4" />
 
@@ -49,18 +50,22 @@
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc" />
   </node>
-  <node pkg="rovi" type="floats2pc" name="" args="solve0">
+  <node pkg="rovi" type="floats2pc" name="" args="camera/capture0/solve0">
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc0" />
   </node>
-  <node pkg="rovi" type="floats2pc" name="" args="solve1">
+  <node pkg="rovi" type="floats2pc" name="" args="camera/capture0/solve1">
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc1" />
   </node>
 
-  <!--   Message logger  -->
-  <node pkg="rovi_utils" type="tk_message.py" name="" args="/message /rovi/error" />
-
   <!--   UI   -->
-  <node pkg="rqt_param_manager" type="rqt_param_manager" name="" args="conf:=$(find rovi_master_teach)/main.ui dump:=$(find rovi_master_teach)/recipe/param.yaml" />
+  <rosparam command="load" file="$(find rovi_master_teach)/panel.yaml" />
+  <node pkg="rovi_utils" type="panel.py" name="" args="path:=$(find rovi_master_teach)" output="screen">
+    <remap from="~config" to="/config/panel" />
+    <remap from="~param" to="/panel" />
+    <remap from="~load" to="/request/recipe_load" />
+    <remap from="~loaded" to="/request/model_load" />
+    <remap from="~failed" to="/response/recipe_load" />
+  </node>
 </launch>
