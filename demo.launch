@@ -61,7 +61,7 @@
 
   <!--   UI   -->
   <rosparam command="load" file="$(find rovi_master_teach)/panel.yaml" />
-  <node pkg="rovi_utils" type="panel.py" name="" args="path:=$(find rovi_master_teach)" output="screen">
+  <node pkg="rovi_utils" type="dashboard.py" name="" args="path:=$(find rovi_master_teach)" output="screen">
     <remap from="~config" to="/config/panel" />
     <remap from="~param" to="/panel" />
     <remap from="~load" to="/request/recipe_load" />
