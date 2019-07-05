@@ -14,4 +14,7 @@
 "Number:/cropper/cropZ","Zクロップ"
 "Number:/cropper/cropR","Rクロップ"
 "Number:/cropper/mesh","メッシュサイズ"
-"Publisher:/surface_cropper/setcrop","クロップ初期化"
+"Title","マスター登録"
+"Publisher:/request/model_load","マスター呼出"
+"Publisher:/request/model_save","マスター登録"
+"Publisher:/request/solve","解析"

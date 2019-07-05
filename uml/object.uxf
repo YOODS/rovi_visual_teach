@@ -451,7 +451,8 @@ m2=1</panel_attributes>
     <panel_attributes>:Picker
 --
 &lt;&lt;subscriber&gt;&gt;
-score:float[]
+path:poseArray
+barrier:Numpy
 solve
 --
 &lt;&lt;pubisher&gt;&gt;
@@ -459,8 +460,8 @@ plan:Transform
 solved
 --
 &lt;&lt;param/args&gt;&gt;
-start_frame:
-goal_frame:
+source_frame_id:
+target_frame_id:
   &lt;&lt;constraint..&gt;&gt;.</panel_attributes>
     <additional_attributes/>
   </element>
@@ -474,7 +475,7 @@ goal_frame:
     </coordinates>
     <panel_attributes>lt=-&gt;
 m1=1
-m2=1</panel_attributes>
+m2=1..n</panel_attributes>
     <additional_attributes>10.0;10.0;100.0;10.0</additional_attributes>
   </element>
 </diagram>
