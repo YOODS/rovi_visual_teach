@@ -28,7 +28,7 @@
 - [rovi(コア)](https://github.com/YOODS/rovi)
 - [rovi_utils(ユーティティ)](https://github.com/YOODS/rovi_utils)
 - [rqt_parm_manager(パラメータ編集ツール)](https://github.com/YOODS/rqt_param_manager)
-
+- pip install tkfilebrowser --user
 ### Launch  
 #### メイン
 ~~~
