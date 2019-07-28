@@ -43,4 +43,8 @@ roslaunch rovi_master_teach setup.launch
 1. ロボットドライバーの起動
 2. [ロボットキャリブレーション](https://github.com/YOODS/rovi_utils/r-calib)  
 が必要です。
+#### デモの起動
+~~~
+roslaunch rovi_master_teach demo.launch
+~~~
 
