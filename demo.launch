@@ -62,8 +62,6 @@
   <!--   UI   -->
   <rosparam command="load" file="$(find rovi_master_teach)/dashboard.yaml" />
   <node pkg="rovi_utils" type="dashboard.py" name="" args="path:=$(find rovi_master_teach)" output="screen">
-    <remap from="~config" to="/config/dashboard" />
-    <remap from="~param" to="/dashboard" />
     <remap from="~load" to="/request/recipe_load" />
     <remap from="~loaded" to="/request/model_load" />
     <remap from="~failed" to="/response/recipe_load" />
