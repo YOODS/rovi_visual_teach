@@ -19,7 +19,7 @@ config:
     launch4:
       note: "robot-camera calibration"
       package: rovi_utils
-      file: calib.launch
+      file: rcalib.launch
     launch5:
       note: "マスター登録"
       package: rovi_master_teach
