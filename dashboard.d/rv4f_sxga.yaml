@@ -1,6 +1,5 @@
 config:
   dashboard:
-    geometry: "1200x26+0+0"
     confirm: "強制停止します"
     launch1:
       label: "カメラドライバ"
@@ -13,13 +12,13 @@ config:
       package: rovi_industrial
       file: rv4f.launch
       confirm: True
-      auto: 5
+      auto: 6
     launch3:
       label: "  VT  "
       package: rovi_master_teach
       file: main.launch
       confirm: True
-      auto: 10
+      auto: 8
     launch4:
       label: "キャリブレーション"
       package: rovi_utils
@@ -28,3 +27,9 @@ config:
       label: "セットアップ"
       package: rovi_master_teach
       file: setup.launch
+    launch6:
+      label: "Viewer"
+      package: rovi_master_teach
+      file: viewer.launch
+      confirm: True
+      auto: 10

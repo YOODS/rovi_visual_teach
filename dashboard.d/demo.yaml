@@ -1,14 +1,20 @@
 config:
   dashboard:
-    geometry: "1200x26+0+0"
     confirm: "強制停止します"
     launch3:
       label: "VT(demo)"
       package: rovi_master_teach
       file: demo.launch
       confirm: True
-      auto: 2
+      auto: 1
     launch5:
       label: "セットアップ"
       package: rovi_master_teach
       file: setup.launch
+    launch6:
+      label: "Viewer"
+      package: rovi_master_teach
+      file: viewer.launch
+      confirm: True
+      auto: 2
+

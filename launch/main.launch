@@ -41,6 +41,4 @@
     <remap from="~score" to="/searcher/score" />
     <remap from="~solved" to="/response/solve" />
   </node>
-
-  <include file="$(find rovi_master_teach)/launch/viewer.launch" />
 </launch>
