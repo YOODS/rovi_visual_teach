@@ -1,0 +1,30 @@
+config:
+  dashboard:
+    geometry: "1200x26+0+0"
+    confirm: "強制停止します"
+    launch1:
+      label: "カメラドライバ"
+      package: rovi
+      file: ycam3sxga.launch
+      confirm: True
+      auto: 0
+    launch2:
+      label: "ロボットドライバ"
+      package: rovi_industrial
+      file: rv4f.launch
+      confirm: True
+      auto: 5
+    launch3:
+      label: "  VT  "
+      package: rovi_master_teach
+      file: main.launch
+      confirm: True
+      auto: 10
+    launch4:
+      label: "キャリブレーション"
+      package: rovi_utils
+      file: rcalib.launch
+    launch5:
+      label: "セットアップ"
+      package: rovi_master_teach
+      file: setup.launch
