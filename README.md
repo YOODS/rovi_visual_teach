@@ -1,46 +1,32 @@
-# MasterTeach
+# Visual Teaching & Playback
 
-## 設計
-
-### ユースケース
-![usecase](uml/usecase.png)
-
-### 要件(ユースケース補足)
-- 3とおりの機器構成
-
-||カメラ|対象物体|
-|:----|:----|:----|
-|1|ロボット|固定|
-|2|固定|ロボット|
-|3|固定|固定|
-
-- 構成1,2での点群合成機能
-- 構成1でのマウントポイント指定(J6,J5...)
-- ソルバー選択機能
-
-### オブジェクト図
-![object](uml/object.png)
-
-## 運用
-
-### 準備  
+## 準備  
 以下をCheckoutしてBuildします。
 - [rovi(コア)](https://github.com/YOODS/rovi)
 - [rovi_utils(ユーティティ)](https://github.com/YOODS/rovi_utils)
-- [rqt_parm_manager(パラメータ編集ツール)](https://github.com/YOODS/rqt_param_manager)
+- [rtk_tools(GUIツール)](https://github.com/YOODS/rtk_tools)
 
-### Launch  
-#### メイン
+## 起動  
+1. dashboardの起動  
+弊社アプリケーションのエントリーポイントは全て**start.launch**です。
 ~~~
-roslaunch rovi_master_teach main.launch
+roslaunch rovi_master_teach start.launch
 ~~~
-#### 段取り  
-撮像調整、マスター登録など
-~~~
-roslaunch rovi_master_teach setup.launch
-~~~
-**使用する前に...**
-1. ロボットドライバーの起動
-2. [ロボットキャリブレーション](https://github.com/YOODS/rovi_utils/r-calib)  
-が必要です。
+これによって先ずdashboardが起動されます。
 
+2. アプリケーションの起動  
+アプリケーションを構成するlaunch群は**dashboard**から起動されます。どのlaunchを起動するかはdashboard.yamlの設定に従います。
+dashboard.yamlのlaunchプロパティ下のautoプロパティにて、dashboardが起動されてから当該launchが起動するまでの時間を設定します。autoプロパティが無いlaunchは自動起動されませんが、dashboardの**Start**ボタンにて手動で起動できます。
+
+### dashboard.yamlの編集  
+dashboard.yamlはdashboard.d以下のファイルへのシンボリックリンクになっています。機器構成に合わせてリンクを編集します。  
+下はdashboard設定として*ur5_sxga.yaml*を使う場合の例です。
+~~~
+ln -fs dashboard.d/ur5_sxga.yaml dashboard.yaml
+~~~
+VT評価キットには*eval.yaml*を使います。以下に例示します。
+~~~
+ln -fs dashboard.d/eval.yaml dashboard.yaml
+~~~
+## スクリーンショット
+![object](img/snap.png)
