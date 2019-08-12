@@ -1,7 +1,19 @@
 config:
+  panel:
+    color:
+      background: "#00AAFF"
   dashboard:
-    confirm: "強制停止します"
-    fontsize: 10
+    label:
+      confirm: "強制停止します"
+      open: "レシピ呼出"
+      save: "レシピ保存"
+    font:
+      size: 10
+    color:
+      background: "#00AAFF"
+      lit: "#FF7700"
+      unlit: "#000000"
+      mask: "#555555"
     launch3:
       label: "VT(demo)"
       package: rovi_master_teach
