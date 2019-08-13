@@ -1,6 +1,7 @@
 config:
   dashboard:
     confirm: "強制停止します"
+    fontsize: 10
     launch1:
       label: "カメラドライバ"
       package: rovi
@@ -33,3 +34,13 @@ config:
       file: viewer.launch
       confirm: True
       auto: 10
+    indicator1:
+      label: "YCAM"
+      topic: /rovi/stat
+      type: std_msgs/Bool
+      timeout: 2
+    indicator2:
+      label: "通信"
+      topic: /robo/stat
+      type: std_msgs/Bool
+      timeout: 2
