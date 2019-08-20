@@ -1,5 +1,8 @@
 <launch>
-  <rosparam command="load" file="$(find rovi_master_teach)/dashboard.yaml" />
+  <include $(find ur_modern_driver)/launch/ur5_bringup.launch>
+    <arg robot_ip="172.16.58.20">
+  </include>
+  <rosparam command="load" file="$(find rovi_master_teach)/dashboard.d/ur5_sxga.yaml" />
   <node pkg="rtk_tools" type="dashboard.py" name="" args="path:=$(find rovi_master_teach)" output="screen">
     <remap from="~load" to="/request/recipe_load" />
     <remap from="~loaded" to="/request/model_load" />
