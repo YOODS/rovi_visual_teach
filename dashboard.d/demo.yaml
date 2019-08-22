@@ -14,17 +14,26 @@ config:
       lit: "#FF7700"
       unlit: "#000000"
       mask: "#555555"
-    launch3:
+    launch_rsock:
+      label: "ロボットドライバ"
+      package: rovi_industrial
+      file: ur5.launch
+      confirm: True
+    launch_vt:
       label: "VT(demo)"
       package: rovi_master_teach
       file: demo.launch
       confirm: True
       auto: 1
-    launch5:
+    launch_rcalib:
+      label: "キャリブレーション"
+      package: rovi_utils
+      file: rcalib.launch
+    launch_setup:
       label: "セットアップ"
       package: rovi_master_teach
       file: setup.launch
-    launch6:
+    launch_viewer:
       label: "Viewer"
       package: rovi_master_teach
       file: viewer.launch
