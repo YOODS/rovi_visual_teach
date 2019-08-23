@@ -1,46 +1,18 @@
 config:
   dashboard:
-    confirm: "強制停止します"
-    fontsize: 10
     launch_ycam:
-      label: "カメラドライバ"
-      package: rovi
       file: ycam3sxga.launch
-      confirm: True
-      auto: 0
     launch_rsock:
-      label: "ロボットドライバ"
-      package: rovi_industrial
       file: rv4f.launch
-      confirm: True
-      auto: 6
     launch_vt:
-      label: "  VT  "
-      package: rovi_master_teach
       file: main.launch
-      confirm: True
-      auto: 8
+      args:
+        config_tf: config_tf.d/dummy_j6.yaml
     launch_rcalib:
-      label: "キャリブレーション"
-      package: rovi_utils
       file: rcalib.launch
+      args:
+        config_tf: config_tf.d/dummy_j6.yaml
     launch_setup:
-      label: "セットアップ"
-      package: rovi_master_teach
       file: setup.launch
     launch_viewer:
-      label: "Viewer"
-      package: rovi_master_teach
       file: viewer.launch
-      confirm: True
-      auto: 10
-    indicator1:
-      label: "YCAM"
-      topic: /rovi/stat
-      type: std_msgs/Bool
-      timeout: 2
-    indicator2:
-      label: "通信"
-      topic: /robo/stat
-      type: std_msgs/Bool
-      timeout: 2

@@ -1,51 +1,19 @@
 config:
-  panel:
-    color:
-      background: "#00AAFF"
   dashboard:
-    label:
-      confirm: "強制停止します"
-      open: "レシピ呼出"
-      save: "レシピ保存"
-    font:
-      size: 10
-    color:
-      background: "#00AAFF"
-      lit: "#FF7700"
-      unlit: "#000000"
-      mask: "#555555"
     launch_rsock:
-      label: "ロボットドライバ"
-      package: rovi_industrial
       file: ur5.launch
-      confirm: True
+      auto: -1
     launch_vt:
-      label: "VT(demo)"
-      package: rovi_master_teach
       file: demo.launch
-      confirm: True
-      auto: 1
+      args:
+        config_tf: config_tf.d/demo.yaml
+      auto: 0
     launch_rcalib:
-      label: "キャリブレーション"
-      package: rovi_utils
       file: rcalib.launch
+      args:
+        config_tf: config_tf.d/demo.yaml
     launch_setup:
-      label: "セットアップ"
-      package: rovi_master_teach
       file: setup.launch
     launch_viewer:
-      label: "Viewer"
-      package: rovi_master_teach
       file: viewer.launch
-      confirm: True
-      auto: 2
-    indicator1:
-      label: "YCAM"
-      topic: /rovi/stat
-      type: std_msgs/Bool
-      timeout: 2
-    indicator2:
-      label: "通信"
-      topic: /robo/stat
-      type: std_msgs/Bool
-      timeout: 2
+      auto: 3

@@ -1,8 +1,65 @@
 config:
   dashboard:
     package: rovi_master_teach
-    load: demo.yaml
+    file: demo.yaml
     altitude: '+0'
+    label:
+      confirm: "強制停止します"
+    font:
+      size: 10
+    color:
+      background: "#00AAFF"
+      lit: "#FF7700"
+      unlit: "#000000"
+      mask: "#555555"
+
+    launch_ycam:
+      label: "カメラドライバ"
+      package: rovi
+      confirm: True
+      auto: 0
     launch_rsock:
+      label: "ロボットドライバ"
+      package: rovi_industrial
+      confirm: True
+      auto: 6
       args:
         address: '111.222.333.444'
+    launch_vt:
+      label: "VT"
+      package: rovi_master_teach
+      auto: 8
+      args:
+        package: rovi_master_teach
+        file: rcalib.yaml
+    launch_rcalib:
+      label: "キャリブレーション"
+      package: rovi_utils
+      args:
+        package: rovi_master_teach
+        file: rcalib.yaml
+    launch_setup:
+      label: "セットアップ"
+      package: rovi_master_teach
+      file: setup.launch
+    launch_viewer:
+      label: "Viewer"
+      package: rovi_master_teach
+      file: viewer.launch
+      confirm: True
+      auto: 10
+
+    indicator1:
+      label: "YCAM"
+      topic: /rovi/stat
+      type: std_msgs/Bool
+      timeout: 2
+    indicator2:
+      label: "通信"
+      topic: /robo/stat
+      type: std_msgs/Bool
+      timeout: 2
+
+  panel:
+    color:
+      background: "#00AAFF"
