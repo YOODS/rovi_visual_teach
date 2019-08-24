@@ -37,7 +37,6 @@ config:
       package: rovi_utils
       file: rcalib.launch
       args:
-        load_tf: False
         result: rovi_master_teach/rcalib.yaml
     launch_setup:
       label: "セットアップ"
