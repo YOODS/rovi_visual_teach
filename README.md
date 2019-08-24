@@ -19,19 +19,19 @@ roslaunch rovi_master_teach start.launch
 プログラムはlaunch単位にて**dashboard**から起動されます。dashboardから起動されるプログラムには
   - dashboardから自動的に起動されるもの
   - Startボタンにて起動されるもの  
-があります。これらはdashboard.yamlの設定に従います。  
+があります。これらはパラメータ/config/dashboard/下の設定に従います。  
 起動中のプログラムは、そのラベルの背景が白(文字色は黒)、停止中のものは背景グレー(文字色は赤)にて区別されます。
 
-### dashboard.yamlの設定  
-dashboard.yamlは *dashboard.d/* 以下のファイルへのシンボリックリンクになっています。checkout直後のリンク先は *dashboard.d/demo.yaml* ですが、これを機器構成に合わせて変更します。  
-下は *ur5_sxga.yaml* を使う場合の例です。
-~~~
-ln -fs dashboard.d/ur5_sxga.yaml dashboard.yaml
-~~~
-VT評価キットには *eval.yaml* を使います。このときは以下のようにします。
-~~~
-ln -fs dashboard.d/eval.yaml dashboard.yaml
-~~~
+## パラメータファイル構成
+### 構成の設定
+機器構成の違いは、どのyamlファイルをロードするかによって、決定します。dashboard.yamlの**preload**タグはdashboard起動直後にロードされるファイルを指定します。これにより、先の *プログラム起動* はこのファイルによってオーバライドされたパラメータが反映されます。以下にyamlファイルのロード順序を示します。
+
+|分類||start.launch|dashboard起動|プログラム起動|
+|:----|:----|:----|:----|
+|共通設定|dashboard.yaml<br>rcalib.yaml|-|-|
+|機器毎設定|-|rc.d/*.yaml<br>dashboard.yamlにて指定|-|
+|パッケージ毎設定|-|-|*パッケージ* /*.yaml|
+
 
 ### recipeの設定  
 recipeファイル群は *recipe.d/* 以下に保存されます。checkout直後には *recipe.d/10/* にリンクしているはずですが。リンクが破損している場合は以下のように復旧します。

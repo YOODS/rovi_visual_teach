@@ -1,18 +1,23 @@
 config:
   dashboard:
     launch_ycam:
-      file: ycam3sxga.launch
+      file: ycam3sxga_m.launch
     launch_rsock:
-      file: rv4f.launch
+      file: ur.launch
+      args:
+        mc: ur5
+        address: "192.168.111.111"
     launch_vt:
       file: main.launch
-      args:
-        config_tf: config_tf.d/dummy_j6.yaml
     launch_rcalib:
       file: rcalib.launch
-      args:
-        config_tf: config_tf.d/dummy_j6.yaml
     launch_setup:
       file: setup.launch
     launch_viewer:
       file: viewer.launch
+
+config_tf:
+  camera:
+    parent_frame_id: wrist_2_link
+  flange:
+    parent_frame_id: wrist_3_link

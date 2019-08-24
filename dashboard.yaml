@@ -1,10 +1,12 @@
 config:
   dashboard:
-    package: rovi_master_teach
-    file: demo.yaml
+    load: rovi_master_teach/rc.d/demo.yaml
+    recipe:
+      link: rovi_master_teach/recipe
+      dir: rovi_master_teach/recipe.d
     altitude: '+0'
-    label:
-      confirm: "強制停止します"
+    message:
+      halt: "プログラムを停止します"
     font:
       size: 10
     color:
@@ -17,27 +19,26 @@ config:
       label: "カメラドライバ"
       package: rovi
       confirm: True
-      auto: 0
+      auto: 1
     launch_rsock:
       label: "ロボットドライバ"
       package: rovi_industrial
       confirm: True
       auto: 6
       args:
-        address: '111.222.333.444'
+        address: "111.222.333.444"
     launch_vt:
       label: "VT"
       package: rovi_master_teach
+      file: main.launch
       auto: 8
-      args:
-        package: rovi_master_teach
-        file: rcalib.yaml
     launch_rcalib:
       label: "キャリブレーション"
       package: rovi_utils
+      file: rcalib.launch
       args:
-        package: rovi_master_teach
-        file: rcalib.yaml
+        load_tf: False
+        result: rovi_master_teach/rcalib.yaml
     launch_setup:
       label: "セットアップ"
       package: rovi_master_teach

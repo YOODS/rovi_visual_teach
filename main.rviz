@@ -5,6 +5,8 @@ Panels:
     Property Tree Widget:
       Expanded:
         - /Grid1/Offset1
+        - /TF1
+        - /TF1/Frames1
       Splitter Ratio: 0.5
     Tree Height: 447
   - Class: rviz/Selection
@@ -25,7 +27,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: PointCloud(Scene)
+    SyncSource: PointCloud(Master)
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -195,6 +197,44 @@ Visualization Manager:
       Topic: /waypoint2
       Unreliable: false
       Value: true
+    - Class: rviz/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+        J6:
+          Value: true
+        camera:
+          Value: true
+        camera/capture0:
+          Value: true
+        camera/capture0/solve0:
+          Value: true
+        camera/master0:
+          Value: true
+        flange:
+          Value: true
+        world:
+          Value: true
+      Marker Scale: 0.5
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        world:
+          J6:
+            camera:
+              {}
+            flange:
+              {}
+          camera/capture0:
+            camera/capture0/solve0:
+              {}
+          camera/master0:
+            {}
+      Update Interval: 0
+      Value: true
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -220,7 +260,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 2.02232361
+      Distance: 2.8431735
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
@@ -235,10 +275,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.899797142
+      Pitch: -0.0302024446
       Target Frame: world
       Value: Orbit (rviz)
-      Yaw: 1.3353864
+      Yaw: 0.670387626
     Saved: ~
 Window Geometry:
   Displays:
@@ -260,5 +300,5 @@ Window Geometry:
   Views:
     collapsed: false
   Width: 1295
-  X: 2
+  X: 0
   Y: 0
