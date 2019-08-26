@@ -1,0 +1,29 @@
+config:
+  dashboard:
+    launch_ycam:
+      file: ycam3sxga.launch
+    launch_rsock:
+      file: melfa.launch
+      args:
+        mc: rv4f
+        address: "192.168.111.111"
+    launch_vt:
+      file: main.launch
+    launch_rcalib:
+      file: rcalib.launch
+      args:
+        config: rovi_master_teach/rc.d/rv4f_sxga.yaml
+    launch_setup:
+      file: setup.launch
+    launch_viewer:
+      file: viewer.launch
+  rsocket:
+    update_frame_id: J6
+
+config_tf:
+  camera:
+    parent_frame_id: J6
+  flange:
+    parent_frame_id: J6
+  J6:
+    parent_frame_id: world
