@@ -6,7 +6,7 @@ config:
       file: ur.launch
       args:
         mc: ur5
-        address: "192.168.111.111"
+        address: "172.16.58.20"
     launch_vt:
       file: main.launch
     launch_rcalib:
@@ -16,8 +16,15 @@ config:
     launch_viewer:
       file: viewer.launch
 
+  rsocket:
+    reverse_frame_id: J5
+
 config_tf:
   camera:
-    parent_frame_id: wrist_2_link
+#    parent_frame_id: wrist_2_link
+    parent_frame_id: J5
   flange:
     parent_frame_id: wrist_3_link
+  J5:
+    parent_frame_id: tool0_controller
+
