@@ -38,5 +38,6 @@
     <remap from="~save" to="/request/model_save" />
     <remap from="~solve" to="/request/solve" />
     <remap from="~solved" to="/response/solve" />
+    <remap from="~stat" to="/searcher/stat" />
   </node>
 </launch>
