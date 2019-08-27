@@ -20,7 +20,7 @@ rovi:
 searcher:
   distance_threshold: 1.5
   icp_threshold: 5.0
-  maxnn_feature: 100
-  maxnn_normal: 30
-  radius_feature: 5.0
-  radius_normal: 2.0
+  feature_max_nn: 100
+  feature_radius: 5.0
+  normal_max_nn: 30
+  normal_radius: 2.0

@@ -30,6 +30,7 @@
     <remap from="~solve" to="/request/solve" />
     <remap from="~solved" to="/searcher/solved" />
     <remap from="~score" to="/searcher/score" />
+    <remap from="~stat" to="/searcher/stat" />
   </node>
   <node pkg="rovi_utils" type="picker.py" name="" output="screen">
     <remap from="~config" to="/config/picker" />

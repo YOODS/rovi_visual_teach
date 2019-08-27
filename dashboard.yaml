@@ -59,6 +59,11 @@ config:
       topic: /robo/stat
       type: std_msgs/Bool
       timeout: 2
+    indicator3:
+      label: "SOLVER"
+      topic: /searcher/stat
+      type: std_msgs/Bool
+      timeout: 2
 
   panel:
     color:
