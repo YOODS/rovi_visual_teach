@@ -1,6 +1,6 @@
 config:
   dashboard:
-    load: rovi_master_teach/rc.d/demo.yaml
+    load: rovi_master_teach/rc.d/ur5_sxga.yaml
     recipe:
       link: rovi_master_teach/recipe
       dir: rovi_master_teach/recipe.d

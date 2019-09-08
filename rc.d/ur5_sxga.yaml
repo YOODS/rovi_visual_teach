@@ -17,14 +17,14 @@ config:
       file: viewer.launch
 
   rsocket:
-    reverse_frame_id: J5
+    reverse_frame_id: J7
 
 config_tf:
   camera:
-#    parent_frame_id: wrist_2_link
-    parent_frame_id: J5
+#   parent_frame_id: tool0_controller
+    parent_frame_id: J7
   flange:
-    parent_frame_id: wrist_3_link
-  J5:
+    parent_frame_id: tool0_controller
+  J7:
     parent_frame_id: tool0_controller
 

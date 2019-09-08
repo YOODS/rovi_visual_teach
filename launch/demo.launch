@@ -36,6 +36,7 @@
     <remap from="~load" to="/request/model_load" />
     <remap from="~loaded" to="/response/model_load" />
     <remap from="~save" to="/request/model_save" />
+    <remap from="~saved" to="/response/model_save" />
     <remap from="~solve" to="/request/solve" />
     <remap from="~solved" to="/response/solve" />
     <remap from="~stat" to="/searcher/stat" />
