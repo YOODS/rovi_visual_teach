@@ -12,6 +12,7 @@ config:
     source_frame_id: "camera/capture"
     frame_id: "camera/capture0"
     relay: "/rovi/X1"
+    ansback: "/rovi/Y1"
   picker:
     frame_id: "pick"
   rsocket:
