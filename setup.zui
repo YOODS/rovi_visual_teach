@@ -16,6 +16,7 @@
 "class":"Title",  "label":"4.マスター管理"
 "class":"Pub",    "name":"/request/model_save","label":"マスター登録"
 "class":"Popup",  "name":"/response/model_save","label":"マスター登録"
+"class":"Pub",    "name":"/request/redraw","label":"再描画"
 
 "class":"Title",  "label":"5.解析エンジン","page":"break"
 "class":"Number", "name":"/searcher/normal_max_nn","label":"法線決定点数"
@@ -23,5 +24,7 @@
 "class":"Number", "name":"/searcher/feature_max_nn","label":"特徴点決定点数"
 "class":"Number", "name":"/searcher/feature_radius","label":"特徴点決定半径"
 "class":"Number", "name":"/searcher/distance_threshold","label":"対応特徴点最大距離"
-"class":"Number", "name":"/searcher/icp_threshold":0.0015,"label":"ICP有効点距離"
+"class":"Number", "name":"/searcher/icp_threshold","label":"ICP有効点距離"
 "class":"Pub",    "name":"/request/solve","label":"解析"
+
+

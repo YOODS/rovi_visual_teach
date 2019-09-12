@@ -21,10 +21,10 @@ config:
 
 config_tf:
   camera:
-#   parent_frame_id: tool0_controller
+#   parent_frame_id: tool0
     parent_frame_id: J7
   flange:
-    parent_frame_id: tool0_controller
+    parent_frame_id: tool0
   J7:
-    parent_frame_id: tool0_controller
+    parent_frame_id: tool0
 

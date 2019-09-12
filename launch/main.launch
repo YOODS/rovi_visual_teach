@@ -30,6 +30,7 @@
     <remap from="~saved" to="/response/model_save" />
     <remap from="~solve" to="/request/solve" />
     <remap from="~solved" to="/searcher/solved" />
+    <remap from="~redraw" to="/request/redraw" />
     <remap from="~score" to="/searcher/score" />
     <remap from="~stat" to="/searcher/stat" />
   </node>
