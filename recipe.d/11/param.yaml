@@ -1,10 +1,15 @@
 cropper:
-  cropR: 1.0
-  cropZ: 1.0
+  cropR: 0.08
+  cropZ: 0.42
   mesh: 0.001
+  ladle: 100000
 picker:
-  zDiff: 0.3
-  zRot: 3.14
+  transform:
+    zDiff: 0.3
+    zRot: 3.14
+  fitness:
+    min: 0.8
+    max: 1
 rovi:
   live:
     camera:

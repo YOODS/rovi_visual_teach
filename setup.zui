@@ -26,5 +26,6 @@
 "class":"Number", "name":"/searcher/distance_threshold","label":"対応特徴点最大距離"
 "class":"Number", "name":"/searcher/icp_threshold","label":"ICP有効点距離"
 "class":"Pub",    "name":"/request/solve","label":"解析"
-
+"class":"Title",  "label":"6.解析チェック"
+"class":"Number", "name":"/picker/fitness/min","label":"一致度下限値"
 
