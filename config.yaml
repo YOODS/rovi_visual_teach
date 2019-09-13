@@ -16,6 +16,7 @@ config:
   picker:
     frame_id: "pick"
   rsocket:
-    base_frame_id: world
+    base_frame_id: base
     source_frame_id: camera/master0
     target_frame_id: camera/capture0/solve0
+

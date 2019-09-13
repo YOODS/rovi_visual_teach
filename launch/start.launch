@@ -1,5 +1,6 @@
 <launch>
   <rosparam command="load" file="$(find rovi_master_teach)/dashboard.yaml" />
+  <rosparam command="load" file="$(find rovi_master_teach)/config.yaml" />
   <node pkg="rtk_tools" type="dashboard.py" name="" output="screen">
     <remap from="~load" to="/request/recipe_load" />
     <remap from="~loaded" to="/request/model_load" />

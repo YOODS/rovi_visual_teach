@@ -7,10 +7,15 @@ config:
       args:
         mc: ur5
         address: "172.16.58.20"
+  rsocket:
+    reverse_frame_id: J7
 
 config_tf:
   camera:
-   parent_frame_id: tool0
+#   parent_frame_id: tool0
+    parent_frame_id: J7
   flange:
+    parent_frame_id: tool0
+  J7:
     parent_frame_id: tool0
 
