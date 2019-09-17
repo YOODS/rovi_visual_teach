@@ -10,6 +10,7 @@
 アプリケーションが正しく動作するには、後述の *dashboard.yamlの設定* , *recipeの設定* が必要です。しかしながら、checkoutしたままの状態でもデモモードで起動するので、必要なソフトウェアが正しくインストールされていることを確認するために、まずは以下の手順にて起動テストを行います。
 1. dashboardの起動  
 弊社アプリケーションのエントリーポイントは全て**start.launch**です。
+
 ~~~
 roslaunch rovi_master_teach start.launch
 ~~~
@@ -46,4 +47,3 @@ ln -fs recipe.d/10/ recipe
 
 ## スクリーンショット
 ![object](img/snap.png)
-
