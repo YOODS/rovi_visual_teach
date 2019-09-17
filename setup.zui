@@ -12,6 +12,7 @@
 "class":"Title",  "label":"3.クロップ"
 "class":"Number", "name":"/cropper/cropZ","label":"Zクロップ"
 "class":"Number", "name":"/cropper/cropR","label":"Rクロップ"
+"class":"Number", "name":"/cropper/ladle","label":"すくい取り数"
 "class":"Number", "name":"/cropper/mesh","label":"メッシュサイズ"
 "class":"Title",  "label":"4.マスター管理"
 "class":"Pub",    "name":"/request/model_save","label":"マスター登録"
