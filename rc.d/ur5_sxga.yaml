@@ -1,0 +1,16 @@
+config:
+  dashboard:
+    launch_ycam:
+      file: ycam3sxga_m.launch
+    launch_rsock:
+      file: ur.launch
+      args:
+        mc: ur5
+        address: "172.16.58.20"
+
+config_tf:
+  camera:
+   parent_frame_id: tool0
+  flange:
+    parent_frame_id: tool0
+

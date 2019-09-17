@@ -1,0 +1,21 @@
+config:
+  dashboard:
+    launch_vt:
+      file: demo.launch
+      auto: 0
+    launch_viewer:
+      auto: 3
+    launch_setup:
+      args:
+        "str": "string"
+        "number": 10
+  rsocket:
+    update_frame_id: J6
+
+config_tf:
+  camera:
+    parent_frame_id: J6
+  flange:
+    parent_frame_id: J6
+  J6:
+    parent_frame_id: world

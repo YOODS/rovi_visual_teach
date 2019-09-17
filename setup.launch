@@ -1,3 +1,0 @@
-<launch>
-  <node pkg="rqt_param_manager" type="rqt_param_manager" name="" args="conf:=$(find rovi_master_teach)/setup.ui dump:=$(find rovi_master_teach)/recipe/param.yaml" />
-</launch>

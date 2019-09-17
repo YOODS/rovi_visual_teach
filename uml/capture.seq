@@ -1,0 +1,9 @@
+title request/response capture
+
+rscoket->cropper:request
+cropper->rovi:X1
+rovi->cropper:Y1
+cropper->rscoket:response
+opt:Y1 is True
+rovi->cropper:ps
+cropper->searcher:output
