@@ -14,8 +14,8 @@ VTを導入するにあたり、各社ロボットの要件適合性を調査し
 <tr><td colspan="2">3D表示<th>○<th><th>○<th><th><th>○
 <tr><th colspan="8">
 <tr><th>ロボットメーカ<th>型式
-<tr><td>三菱<td>Melfa<th>○<th>○<th>○<th>○<th>ー<th>○
-<tr><td>Fanuc<td><th>○<th>ー<th>ー<th>○<th>ー<th>○
+<tr><td>三菱<td>Melfa<th>○<th>○<th>○<th>○<th>○<th>○
+<tr><td>Fanuc<td><th>○<th>ー<th>ー<th>○<th>○<th>○
 <tr><td>UR<td><th>○<th>○<th>○<th>ー<th>○<th>○
 <tr><td>Kuka<td><th>○<th><th><th><th><th>
 </table>
