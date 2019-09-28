@@ -8,6 +8,7 @@ config:
         mc: ur5
         address: "172.16.58.20"
   rsocket:
+    port: 3000
     reverse_frame_id: J7
 
 config_tf:

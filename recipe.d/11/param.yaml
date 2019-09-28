@@ -2,11 +2,12 @@ cropper:
   cropR: 0.08
   cropZ: 0.42
   mesh: 0.001
-  ladle: 100000
+  ladC: 100000
+  ladW: 0
 picker:
-  transform:
-    zDiff: 0.3
-    zRot: 3.14
+  azimuth:
+    min: 0
+    max: 1
   fitness:
     min: 0.8
     max: 1
