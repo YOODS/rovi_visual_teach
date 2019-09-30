@@ -1,0 +1,16 @@
+title request/response solve
+
+O->searcher:model load
+searcher->solver:learn
+solver-->searcher:
+note right of O:O can be r_socket,UI or dashboard
+O->searcher:request/solve
+searcher->solver:solve
+solver-->searcher:
+alt:result is nan
+searcher-->O:response/solve\nFalse
+else
+searcher->TF:transform
+searcher->picker:score
+picker-->O:response/solve\nTrue or False
+end

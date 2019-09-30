@@ -1,9 +1,12 @@
 title request/response capture
-
-rscoket->cropper:request
+note right of O:O can be r_socket or UI
+O->cropper:request/capture
 cropper->rovi:X1
 rovi->cropper:Y1
-cropper->rscoket:response
-opt:Y1 is True
+alt:Y1 is True
+cropper->O:response/capture\nTrue
 rovi->cropper:ps
 cropper->searcher:output
+else
+cropper->O:response/capture\nFalse
+end
