@@ -14,5 +14,6 @@ config_tf:
   flange:
     parent_frame_id: J6
   J6:
+    parent_frame_id: base
+  base:
     parent_frame_id: world
-
