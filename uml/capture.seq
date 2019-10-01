@@ -1,12 +1,14 @@
+@startuml
 title request/response capture
-note right of O:O can be r_socket or UI
-O->cropper:request/capture
+rsocket->cropper:capture
+cropper->TF:.../captureN
 cropper->rovi:X1
-rovi->cropper:Y1
-alt:Y1 is True
-cropper->O:response/capture\nTrue
+rovi-->cropper:Y1
+alt Y1 is True
+cropper->rsocket:capture True
 rovi->cropper:ps
-cropper->searcher:output
+cropper->searcher:ps_float:surface
 else
-cropper->O:response/capture\nFalse
+cropper->rsocket:capture False
 end
+@enduml
