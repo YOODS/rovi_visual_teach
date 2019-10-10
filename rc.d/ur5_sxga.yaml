@@ -9,6 +9,8 @@ config:
         address: "172.16.58.20"
   rsocket:
     port: 3000
+  rcalib:
+    weight: 1
 
 config_tf:
   camera:
