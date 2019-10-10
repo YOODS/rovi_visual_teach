@@ -1,16 +1,20 @@
-title request/response solve
-
-O->searcher:model load
-searcher->solver:learn
-solver-->searcher:
-note right of O:O can be r_socket,UI or dashboard
-O->searcher:request/solve
-searcher->solver:solve
-solver-->searcher:
-alt:result is nan
-searcher-->O:response/solve\nFalse
+@startuml
+title request/response solve and recipe load
+note right of rsocket:request/response recipe_load
+rsocket->dashboard:recipe_load
+dashboard->searcher:model_load
+searcher-\solver:learn
+solver-/searcher:
+searcher-->rsocket:recipe_load
+note right of rsocket:request/response solve
+rsocket->searcher:solve
+searcher-\solver:solve
+solver-/searcher:result
+alt result is nan
+searcher-->rsocket:solve False
 else
 searcher->TF:transform
 searcher->picker:score
-picker-->O:response/solve\nTrue or False
+picker-->rsocket:solve True or False
 end
+@enduml
