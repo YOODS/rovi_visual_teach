@@ -8,8 +8,6 @@ config:
     port: 3000
     update_frame_id: J6
     reverse_frame_id: J5
-  rcalib:
-    weight: 1000
 
 config_tf:
   camera:

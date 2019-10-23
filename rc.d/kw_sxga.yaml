@@ -7,8 +7,6 @@ config:
   rsocket:
     port: 8888
     update_frame_id: J6
-  rcalib:
-    weight: 1000
 
 config_tf:
   camera:
