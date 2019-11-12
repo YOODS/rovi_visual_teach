@@ -10,7 +10,7 @@ config:
   rsocket:
     port: 3000
     reverse_frame_id: J7
-    reverse_direction: 1
+    reverse_direction: -1
 
 config_tf:
   camera:
