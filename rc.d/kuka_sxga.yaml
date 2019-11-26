@@ -1,0 +1,15 @@
+config:
+  dashboard:
+    launch_ycam:
+      file: ycam3sxga.launch
+    launch_rsock:
+      file: kuka.launch
+  rsocket:
+    port: 3000
+    update_frame_id: tool0
+
+config_tf:
+  camera:
+    parent_frame_id: tool0
+  flange:
+    parent_frame_id: tool0
