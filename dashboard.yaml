@@ -1,6 +1,6 @@
 config:
   dashboard:
-    load: rovi_master_teach/rc.d/ur5_sxga_J7.yaml
+    load: rovi_master_teach/rc.d/melfa.yaml
     recipe:
       link: rovi_master_teach/recipe
       dir: rovi_master_teach/recipe.d

@@ -1,0 +1,21 @@
+config:
+  dashboard:
+    launch_ycam:
+      file: ycam3sxga.launch
+    launch_rsock:
+      file: melfa.launch
+      address: "192.168.221.239"
+  rsocket:
+    port: 10002
+    update_frame_id: J6
+
+config_tf:
+  camera:
+    parent_frame_id: J6
+  flange:
+    parent_frame_id: J6
+  J6:
+    parent_frame_id: base
+  base:
+    parent_frame_id: world
+
