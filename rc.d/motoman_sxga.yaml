@@ -1,0 +1,20 @@
+config:
+  dashboard:
+    launch_ycam:
+      file: ycam3sxga_m.launch
+    launch_rsock:
+      file: hc10.launch
+  rsocket:
+    robot_port: 11000
+    robot_ip: 192.168.255.1
+    port: 3333
+    reverse_frame_id: mount
+
+config_tf:
+  camera:
+    parent_frame_id: mount
+  flange:
+    parent_frame_id: tool0
+  mount:
+    parent_frame_id: tool0
+
