@@ -1,0 +1,17 @@
+config:
+  dashboard:
+    launch_ycam:
+      file: ycam3sxga_m.launch
+    launch_rsock:
+      file: dummy.launch
+  rsocket:
+    reverse_frame_id: mount
+
+config_tf:
+  camera:
+    parent_frame_id: mount
+  flange:
+    parent_frame_id: tool0
+  mount:
+    parent_frame_id: tool0
+
