@@ -4,10 +4,10 @@ config:
       file: ycam3sxga.launch
     launch_rsock:
       file: melfa.launch
+      address: 192.168.0.20
   rsocket:
     port: 3000
     update_frame_id: J6
-    reverse_frame_id: J5
 
 config_tf:
   camera:
@@ -15,6 +15,6 @@ config_tf:
   flange:
     parent_frame_id: J6
   J6:
+    parent_frame_id: base
+  base:
     parent_frame_id: world
-  J5:
-    parent_frame_id: J6
