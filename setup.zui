@@ -21,6 +21,7 @@
 "class":"Pub",    "name":"/request/redraw","label":"再描画"
 
 "class":"Title",  "label":"5.解析エンジン","page":"break"
+"class":"Number", "name":"/searcher/rotate","label":"回転対称数"
 "class":"Number", "name":"/searcher/normal_radius","label":"法線決定半径"
 "class":"Number", "name":"/searcher/feature_mesh","label":"特徴点メッシュサイズ"
 "class":"Number", "name":"/searcher/feature_radius","label":"特徴点決定半径"
