@@ -16,7 +16,7 @@
 "class":"Number", "name":"/cropper/ladW","label":"すくいワールド"
 "class":"Number", "name":"/cropper/mesh","label":"メッシュサイズ"
 "class":"Title",  "label":"4.マスター管理"
-"class":"Pub",    "name":"/request/model_save","label":"マスター登録"
+"class":"Pub",    "name":"/request/model_save","label":"マスター登録","confirm":"登録しますか？"
 "class":"Popup",  "name":"/response/model_save","label":"マスター登録"
 "class":"Pub",    "name":"/request/redraw","label":"再描画"
 
