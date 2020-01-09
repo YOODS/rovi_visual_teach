@@ -10,6 +10,8 @@
 "class":"Echo",   "name":"/rovi/pcount","label":"撮像点数"
 "class":"Pub",    "name":"/request/clear","label":"クリア"
 "class":"Title",  "label":"3.クロップ"
+"class":"Number", "name":"/cropper/nfrad","label":"ノイズ識別半径"
+"class":"Number", "name":"/cropper/nfmin","label":"ノイズ識別点数"
 "class":"Number", "name":"/cropper/cropZ","label":"Zクロップ"
 "class":"Number", "name":"/cropper/cropR","label":"Rクロップ"
 "class":"Number", "name":"/cropper/ladC","label":"すくいカメラ"
@@ -22,8 +24,8 @@
 
 "class":"Title",  "label":"5.解析エンジン","page":"break"
 "class":"Number", "name":"/searcher/rotate","label":"回転対称数"
-"class":"Number", "name":"/searcher/normal_min_nn","label":"ノイズフィルタKnn"
 "class":"Number", "name":"/searcher/normal_radius","label":"法線決定半径"
+"class":"Number", "name":"/searcher/normal_min_nn","label":"不良法線識別点数"
 "class":"Number", "name":"/searcher/feature_mesh","label":"特徴点メッシュサイズ"
 "class":"Number", "name":"/searcher/feature_radius","label":"特徴点決定半径"
 "class":"Number", "name":"/searcher/distance_threshold","label":"対応特徴点最大距離"
