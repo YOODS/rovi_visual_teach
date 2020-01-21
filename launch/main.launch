@@ -18,8 +18,8 @@
     <remap from="~out/floats" to="/scene/surface/floats" />
     <remap from="~raw/floats" to="/scene/surface/raw/floats" />
   </node>
-  <node pkg="rovi_utils" type="searcher.py" name="" args="path:=$(find rovi_master_teach)/recipe" output="screen">
-    <remap from="~config" to="/config/searcher" />
+  <node pkg="rovi_utils" type="searcher.py" name="searcher0" args="path:=$(find rovi_master_teach)/recipe" output="screen">
+    <remap from="~config" to="/config/searcher0" />
     <remap from="~param" to="/searcher" />
     <remap from="~in/surface/floats" to="/scene/surface/floats" />
     <remap from="~master/surface/floats" to="/master/surface/floats" />
@@ -34,6 +34,35 @@
     <remap from="~score" to="/searcher/score" />
     <remap from="~stat" to="/searcher/stat" />
   </node>
+  <node pkg="rovi_utils" type="searcher.py" name="searcher1" args="path:=$(find rovi_master_teach)/recipe" output="screen">
+    <remap from="~config" to="/config/searcher1" />
+    <remap from="~param" to="/searcher" />
+    <remap from="~in/surface/floats" to="/scene/surface/floats" />
+    <remap from="~clear" to="/request/clear" />
+    <remap from="~load" to="/request/model_load" />
+    <remap from="~solve" to="/request/solve" />
+    <remap from="~score" to="/searcher/score" />
+  </node>
+  <node pkg="rovi_utils" type="searcher.py" name="searcher2" args="path:=$(find rovi_master_teach)/recipe" output="screen">
+    <remap from="~config" to="/config/searcher2" />
+    <remap from="~param" to="/searcher" />
+    <remap from="~in/surface/floats" to="/scene/surface/floats" />
+    <remap from="~clear" to="/request/clear" />
+    <remap from="~load" to="/request/model_load" />
+    <remap from="~solve" to="/request/solve" />
+    <remap from="~score" to="/searcher/score" />
+  </node>
+<!--
+  <node pkg="rovi_utils" type="searcher.py" name="searcher3" args="path:=$(find rovi_master_teach)/recipe" output="screen">
+    <remap from="~config" to="/config/searcher3" />
+    <remap from="~param" to="/searcher" />
+    <remap from="~in/surface/floats" to="/scene/surface/floats" />
+    <remap from="~clear" to="/request/clear" />
+    <remap from="~load" to="/request/model_load" />
+    <remap from="~solve" to="/request/solve" />
+    <remap from="~score" to="/searcher/score" />
+  </node>
+-->
   <node pkg="rovi_utils" type="picker.py" name="" output="screen">
     <remap from="~config" to="/config/picker" />
     <remap from="~param" to="/picker" />

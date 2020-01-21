@@ -1,12 +1,29 @@
 config:
-  searcher:
+  searcher0:
+    proc: 0
     solver: "ransac_solver"
     scenes: ["surface"]
     scene_frame_id: ["camera/capture0"]
     master_frame_id: ["camera/master0"]
     solve_frame_id: "camera/capture0"
-    org_frame_id: "camera/master0"
-    tf_delay: 0.1
+  searcher1:
+    proc: 1
+    solver: "ransac_solver"
+    scenes: ["surface"]
+    scene_frame_id: ["camera/capture0"]
+    master_frame_id: ["camera/master0"]
+  searcher2:
+    proc: 2
+    solver: "ransac_solver"
+    scenes: ["surface"]
+    scene_frame_id: ["camera/capture0"]
+    master_frame_id: ["camera/master0"]
+  searcher3:
+    proc: 3
+    solver: "ransac_solver"
+    scenes: ["surface"]
+    scene_frame_id: ["camera/capture0"]
+    master_frame_id: ["camera/master0"]
   cropper:
     capture_frame_id: "camera"
     source_frame_id: "camera/capture"
@@ -14,7 +31,8 @@ config:
     relay: "/rovi/X1"
     ansback: "/rovi/Y1"
   picker:
-    frame_id: "pick"
+    multiplex: 3
+    solve_frame_id: "camera/capture0"
   rsocket:
     base_frame_id: base
     source_frame_id: camera/master0
