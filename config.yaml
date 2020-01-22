@@ -1,6 +1,7 @@
 config:
   searcher0:
     proc: 0
+    repeat: 7
     solver: "ransac_solver"
     scenes: ["surface"]
     scene_frame_id: ["camera/capture0"]
@@ -18,12 +19,6 @@ config:
     scenes: ["surface"]
     scene_frame_id: ["camera/capture0"]
     master_frame_id: ["camera/master0"]
-  searcher3:
-    proc: 3
-    solver: "ransac_solver"
-    scenes: ["surface"]
-    scene_frame_id: ["camera/capture0"]
-    master_frame_id: ["camera/master0"]
   cropper:
     capture_frame_id: "camera"
     source_frame_id: "camera/capture"
@@ -31,7 +26,7 @@ config:
     relay: "/rovi/X1"
     ansback: "/rovi/Y1"
   picker:
-    multiplex: 3
+    multiplex: 1
     solve_frame_id: "camera/capture0"
   rsocket:
     base_frame_id: base
