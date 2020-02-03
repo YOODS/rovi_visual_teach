@@ -50,6 +50,7 @@ fitness以上のもので最もカメラに近いものを選択
 - パラメータ追加によるrecipe.d/*/param/yaml変更(Appendix参照)
 
 <hr>
+
 ### 20.02での変更(案)
 - rovi_industrial
     - Frame名称の統一  
@@ -66,6 +67,7 @@ fitness以上のもので最もカメラに近いものを選択
     - rovi/Install.shの変更
 
 <hr>
+
 ### Appendix(A) レシピのparam.yaml変更手順  
 #### param.yaml実例
 ~~~
