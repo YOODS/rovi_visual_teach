@@ -1,6 +1,6 @@
-# ReleaseNote
+# VT-20.01 Release Note
 
-## 2020.1.9
+## 2020.01
 
 ### rovi_utils
 
@@ -18,6 +18,7 @@
 |:----|:----|:----|:----|:----|
 |/searcher/feature_mesh|特徴点のメッシュサイズ。法線メッシュより粗くすることで計算時間を短縮する|特徴点メッシュサイズ|5.解析エンジン|searcher|
 |/searcher/rotate|回転対称物体の回対象数|回転対象数|5.解析エンジン|searcher|
+|/config/searcher/repeat|特徴点サーチのリトライ回数|回転対象数|5.解析エンジン|searcher|
 
 - 廃止機能
 
@@ -25,6 +26,12 @@
 |:----|:----|:----|:----|:----|
 |/searcher/normal_max_nn|-|法線決定点数|5.解析エンジン|searcher|
 |/searcher/feature_max_nn|-|特徴点決定点数|5.解析エンジン|searcher|
+
+- picker.py  
+fitness以上のもので最もカメラに近いものを選択
+
+- ransac_solver.py  
+/config/searcher/repeatで指定回数feature_matching処理を繰り返す
 
 ### rtk_tools
 
@@ -35,10 +42,32 @@
 ### rovi_industrial
 
 - Motoman対応
+- Issue#47対応
+    - 現物確認予定(2月1W 平泉)
 
 ### rovi_master_teach  
 - セットアップパネルの項目追加／削除
-- パラメータ追加によるrecipe.d/*/param/yaml変更
+- パラメータ追加によるrecipe.d/*/param/yaml変更(Appendix参照)
+
+<hr>
+### 20.02での変更(案)
+- rovi_industrial
+    - Frame名称の統一  
+    tool0_controller: コントローラから送信されたツール0座標
+    - TF-treeの構成統一  
+    mountのparentはtool0_controller
+- ransac_solver
+    - feature matching繰り返し数のパラメータ化
+- cropper
+    - R-Crop中心をプロジェクタ光軸中心に変更
+    - Issue#33のYCAM側対応も同時に必要
+- camera_aravis
+    - 0.60→0.64にアップデート
+    - rovi/Install.shの変更
+
+<hr>
+### Appendix(A) レシピのparam.yaml変更手順  
+#### param.yaml実例
 ~~~
 cropper:
   cropR: 0
@@ -79,6 +108,10 @@ searcher:
   normal_radius: 0.003
   rotate: 0  
 ~~~  
-- すべてのrecipeに反映するには、
-    - recipe.d下のひとつのparam.yamlを上記に合わせて編集  
-    - rovi_master_teach下(roscd rovi_master_teach)で、recipe_mixer.pyを実行
+#### すべてのrecipeに反映する手順
+- パラメータを追加する場合
+    - recipe.d下のひとつのparam.yamlを上記に合わせて編集(追加)
+    - rovi_master_teach下(roscd rovi_master_teach)で、*recipe_mixer.py* を実行
+- パラメータを削除する場合
+    - recipe.d下のひとつのparam.yamlを上記に合わせて編集(削除)
+    - rovi_master_teach下(roscd rovi_master_teach)で、*recipe_mixer.py trim* を実行
