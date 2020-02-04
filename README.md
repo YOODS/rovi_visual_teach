@@ -12,7 +12,7 @@
 弊社アプリケーションのエントリーポイントは全て**start.launch**です。
 
 ~~~
-roslaunch rovi_master_teach start.launch
+roslaunch rovi_visual_teach start.launch
 ~~~
 これによって先ずdashboard(スクリーンの上端)が起動されます。
 

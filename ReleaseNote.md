@@ -45,7 +45,7 @@ fitness以上のもので最もカメラに近いものを選択
 - Issue#47対応
     - 現物確認予定(2月1W 平泉)
 
-### rovi_master_teach  
+### rovi_visual_teach  
 - セットアップパネルの項目追加／削除
 - パラメータ追加によるrecipe.d/*/param/yaml変更(Appendix参照)
 
@@ -113,7 +113,7 @@ searcher:
 #### すべてのrecipeに反映する手順
 - パラメータを追加する場合
     - recipe.d下のひとつのparam.yamlを上記に合わせて編集(追加)
-    - rovi_master_teach下(roscd rovi_master_teach)で、*recipe_mixer.py* を実行
+    - rovi_visual_teach下(roscd rovi_visual_teach)で、*recipe_mixer.py* を実行
 - パラメータを削除する場合
     - recipe.d下のひとつのparam.yamlを上記に合わせて編集(削除)
-    - rovi_master_teach下(roscd rovi_master_teach)で、*recipe_mixer.py trim* を実行
+    - rovi_visual_teach下(roscd rovi_visual_teach)で、*recipe_mixer.py trim* を実行

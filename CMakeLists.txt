@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(rovi_master_teach)
+project(rovi_visual_teach)
 
 find_package(catkin REQUIRED)
 

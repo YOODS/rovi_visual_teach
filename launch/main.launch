@@ -1,7 +1,7 @@
 <launch>
-  <rosparam command="load" file="$(find rovi_master_teach)/config.yaml" />
-  <rosparam command="load" file="$(find rovi_master_teach)/recipe/param.yaml" />
-  <rosparam command="load" file="$(find rovi_master_teach)/rcalib.yaml" />
+  <rosparam command="load" file="$(find rovi_visual_teach)/config.yaml" />
+  <rosparam command="load" file="$(find rovi_visual_teach)/recipe/param.yaml" />
+  <rosparam command="load" file="$(find rovi_visual_teach)/rcalib.yaml" />
   <param name="/rovi/pshift_genpc/projector/Mode" type="int" value="1" />
   <param name="/rovi/live/camera/SoftwareTriggerRate" type="int" value="4" />
 
@@ -18,7 +18,7 @@
     <remap from="~out/floats" to="/scene/surface/floats" />
     <remap from="~raw/floats" to="/scene/surface/raw/floats" />
   </node>
-  <node pkg="rovi_utils" type="searcher.py" name="searcher0" args="path:=$(find rovi_master_teach)/recipe" output="screen">
+  <node pkg="rovi_utils" type="searcher.py" name="searcher0" args="path:=$(find rovi_visual_teach)/recipe" output="screen">
     <remap from="~config" to="/config/searcher0" />
     <remap from="~param" to="/searcher" />
     <remap from="~in/surface/floats" to="/scene/surface/floats" />
@@ -35,7 +35,7 @@
     <remap from="~stat" to="/searcher/stat" />
   </node>
 <!--
-  <node pkg="rovi_utils" type="searcher.py" name="searcher1" args="path:=$(find rovi_master_teach)/recipe" output="screen">
+  <node pkg="rovi_utils" type="searcher.py" name="searcher1" args="path:=$(find rovi_visual_teach)/recipe" output="screen">
     <remap from="~config" to="/config/searcher1" />
     <remap from="~param" to="/searcher" />
     <remap from="~in/surface/floats" to="/scene/surface/floats" />

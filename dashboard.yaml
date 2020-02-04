@@ -1,9 +1,9 @@
 config:
   dashboard:
-    load: rovi_master_teach/rc.d/melfa.yaml
+    load: rovi_visual_teach/rc.d/melfa.yaml
     recipe:
-      link: rovi_master_teach/recipe
-      dir: rovi_master_teach/recipe.d
+      link: rovi_visual_teach/recipe
+      dir: rovi_visual_teach/recipe.d
     altitude: '+0'
     message:
       halt: "プログラムを停止します"
@@ -29,7 +29,7 @@ config:
         address: "111.222.333.444"
     launch_vt:
       label: "VT"
-      package: rovi_master_teach
+      package: rovi_visual_teach
       file: main.launch
       auto: 8
     launch_rcalib:
@@ -37,14 +37,14 @@ config:
       package: rovi_utils
       file: rcalib.launch
       args:
-        result: rovi_master_teach/rcalib.yaml
+        result: rovi_visual_teach/rcalib.yaml
     launch_setup:
       label: "セットアップ"
-      package: rovi_master_teach
+      package: rovi_visual_teach
       file: setup.launch
     launch_viewer:
       label: "Viewer"
-      package: rovi_master_teach
+      package: rovi_visual_teach
       file: viewer.launch
       confirm: True
       auto: 10

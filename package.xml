@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <package format="2">
-  <name>rovi_master_teach</name>
+  <name>rovi_visual_teach</name>
   <version>1.0.0</version>
   <description>MasterTeach Method</description>
 

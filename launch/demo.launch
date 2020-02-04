@@ -2,14 +2,14 @@
   <!--   psedo robot driver  -->
   <node pkg="tf" type="static_transform_publisher" name="" args="0.1 0.2 0 0 0 0 1 world J6 1000" />
   <!--   PointCloud publisher from file. For testing   -->
-  <node pkg="rovi_utils" type="filer.py" name="filer" args="wd:=$(find rovi_master_teach)">
+  <node pkg="rovi_utils" type="filer.py" name="filer" args="wd:=$(find rovi_visual_teach)">
     <remap from="~out/floats" to="/rovi/ps_floats" />
   </node>
 
   <!--   Main body of master teach   -->
-  <rosparam command="load" file="$(find rovi_master_teach)/config.yaml" />
-  <rosparam command="load" file="$(find rovi_master_teach)/recipe/param.yaml" />
-  <rosparam command="load" file="$(find rovi_master_teach)/rcalib.yaml" />
+  <rosparam command="load" file="$(find rovi_visual_teach)/config.yaml" />
+  <rosparam command="load" file="$(find rovi_visual_teach)/recipe/param.yaml" />
+  <rosparam command="load" file="$(find rovi_visual_teach)/rcalib.yaml" />
   <param name="/rovi/pshift_genpc/projector/Mode" type="int" value="1" />
   <param name="/rovi/live/camera/SoftwareTriggerRate" type="int" value="4" />
 
@@ -27,7 +27,7 @@
     <remap from="~raw/floats" to="/scene/surface/raw/floats" />
     <remap from="/rovi/X1" to="/filer/load" />
   </node>
-  <node pkg="rovi_utils" type="searcher.py" name="" args="path:=$(find rovi_master_teach)/recipe" output="screen">
+  <node pkg="rovi_utils" type="searcher.py" name="" args="path:=$(find rovi_visual_teach)/recipe" output="screen">
     <remap from="~config" to="/config/searcher" />
     <remap from="~param" to="/searcher" />
     <remap from="~in/surface/floats" to="/scene/surface/floats" />
