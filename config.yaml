@@ -1,7 +1,6 @@
 config:
   searcher0:
     proc: 0
-    repeat: 7
     solver: "ransac_solver"
     scenes: ["surface"]
     scene_frame_id: ["camera/capture0"]
@@ -9,13 +8,7 @@ config:
     solve_frame_id: "camera/capture0"
   searcher1:
     proc: 1
-    solver: "ransac_solver"
-    scenes: ["surface"]
-    scene_frame_id: ["camera/capture0"]
-    master_frame_id: ["camera/master0"]
-  searcher2:
-    proc: 2
-    solver: "ransac_solver"
+    solver: "zhou_solver"
     scenes: ["surface"]
     scene_frame_id: ["camera/capture0"]
     master_frame_id: ["camera/master0"]

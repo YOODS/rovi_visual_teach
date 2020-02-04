@@ -24,6 +24,7 @@
 
 "class":"Title",  "label":"5.解析エンジン","page":"break"
 "class":"Number", "name":"/searcher/rotate","label":"回転対称数"
+"class":"Number", "name":"/searcher/repeat","label":"特徴点マッチング繰返し数"
 "class":"Number", "name":"/searcher/normal_radius","label":"法線決定半径"
 "class":"Number", "name":"/searcher/normal_min_nn","label":"不良法線識別点数"
 "class":"Number", "name":"/searcher/feature_mesh","label":"特徴点メッシュサイズ"

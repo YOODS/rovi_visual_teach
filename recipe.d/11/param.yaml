@@ -1,16 +1,21 @@
 cropper:
   cropR: 0.08
   cropZ: 0.42
-  mesh: 0.001
   ladC: 100000
   ladW: 0
+  mesh: 1.0
+  nfmin: 0
+  nfrad: 0
 picker:
   azimuth:
+    max: 1
     min: 0
-    max: 1
   fitness:
-    min: 0.8
     max: 1
+    min: 0.8
+  rmse:
+    max: 5
+    min: 0
 rovi:
   live:
     camera:
@@ -25,8 +30,10 @@ rovi:
       Mode: ''
 searcher:
   distance_threshold: 1.5
-  icp_threshold: 5.0
-  feature_max_nn: 100
+  feature_mesh: 0.002
   feature_radius: 5.0
-  normal_max_nn: 30
+  icp_threshold: 5.0
+  normal_min_nn: 25
   normal_radius: 2.0
+  repeat: 3
+  rotate: 0
