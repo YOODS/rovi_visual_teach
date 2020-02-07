@@ -1,6 +1,8 @@
 config:
   dashboard:
-    launch_ycam:
+    launch_vga:
+      file: ycam3vga_m.launch
+    launch_sxga:
       file: ycam3sxga_m.launch
     launch_rsock:
       file: ur.launch
@@ -9,15 +11,10 @@ config:
         address: "172.16.58.20"
   rsocket:
     port: 3000
-    reverse_frame_id: J7
+    reverse_frame_id: mount
     reverse_direction: -1
 
 config_tf:
-  camera:
-#   parent_frame_id: tool0
-    parent_frame_id: J7
-  flange:
-    parent_frame_id: tool0
-  J7:
-    parent_frame_id: tool0
+  base:
+    parent_frame_id: world
 

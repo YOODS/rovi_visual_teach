@@ -1,18 +1,20 @@
 cropper:
   cropR: 0
+  cropR2: 0.08
   cropZ: 0
   ladC: 0
   ladW: 40000
+  ladW2: 30000
   mesh: 0.001
   nfmin: 0
-  nfrad: 0
+  nfrad: 0.005
 picker:
   azimuth:
     max: 1
     min: 0
   fitness:
     max: 1
-    min: 0.7
+    min: 0.85
   rmse:
     max: 5
     min: 0
@@ -29,11 +31,11 @@ rovi:
       Intencity: 250
       Mode: 1
 searcher:
-  distance_threshold: 0.003
-  feature_mesh: 0.002
-  feature_radius: 0.015
+  distance_threshold: 0.002
+  feature_mesh: 0.004
+  feature_radius: 0.005
   icp_threshold: 0.001
-  normal_min_nn: 25
-  normal_radius: 0.003
-  repeat: 3
+  normal_min_nn: 0
+  normal_radius: 0.002
+  repeat: 5
   rotate: 0

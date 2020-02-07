@@ -1,3 +1,13 @@
+config_tf:
+  camera:
+    parent_frame_id: mount
+  flange:
+    parent_frame_id: tool0_controller
+  mount:
+    parent_frame_id: tool0_controller
+  tool0_controller:
+    parent_frame_id: base
+
 config:
   searcher0:
     proc: 0

@@ -5,10 +5,9 @@ config:
     launch_sxga:
       file: ycam3sxga.launch
     launch_rsock:
-      file: melfa.launch
-      address: "192.168.221.239"
+      file: kuka.launch
   rsocket:
-    port: 10002
+    port: 3000
     update_frame_id: tool0_controller
 
 config_tf:

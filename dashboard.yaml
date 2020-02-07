@@ -1,6 +1,6 @@
 config:
   dashboard:
-    load: rovi_visual_teach/rc.d/melfa.yaml
+    load: rovi_visual_teach/rc.d/motoman.yaml
     recipe:
       link: rovi_visual_teach/recipe
       dir: rovi_visual_teach/recipe.d
@@ -14,12 +14,15 @@ config:
       lit: "#FF7700"
       unlit: "#000000"
       mask: "#555555"
-
-    launch_ycam:
-      label: "カメラドライバ"
+    launch_vga:
+      label: "カメラドライバ(VGA)"
       package: rovi
       confirm: True
       auto: 1
+    launch_sxga:
+      label: "カメラドライバ(SXGA)"
+      package: rovi
+      confirm: True
     launch_rsock:
       label: "ロボットドライバ"
       package: rovi_industrial

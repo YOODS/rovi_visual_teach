@@ -1,5 +1,4 @@
 <launch>
-  <rosparam command="load" file="$(find rovi_visual_teach)/config.yaml" />
   <rosparam command="load" file="$(find rovi_visual_teach)/recipe/param.yaml" />
   <rosparam command="load" file="$(find rovi_visual_teach)/rcalib.yaml" />
   <param name="/rovi/pshift_genpc/projector/Mode" type="int" value="1" />

@@ -1,6 +1,8 @@
 config:
   dashboard:
-    launch_ycam:
+    launch_vga:
+      file: ycam3vga_m.launch
+    launch_sxga:
       file: ycam3sxga_m.launch
     launch_rsock:
       file: hc10.launch
@@ -8,13 +10,7 @@ config:
     robot_port: 11000
     robot_ip: 192.168.221.10
     port: 3333
+    update_frame_id: tool0_controller
     reverse_frame_id: mount
-
-config_tf:
-  camera:
-    parent_frame_id: mount
-  flange:
-    parent_frame_id: tool0
-  mount:
-    parent_frame_id: tool0
+    reverse_direction: 1
 
