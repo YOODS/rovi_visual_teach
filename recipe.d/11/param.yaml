@@ -1,10 +1,7 @@
 cropper:
   cropR: 0.08
-  cropR2: 0.08
-  cropZ: 0.42
   ladC: 100000
   ladW: 0
-  ladW2: 30000
   mesh: 0.001
   nfmin: 0
   nfrad: 0.005
