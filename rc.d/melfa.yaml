@@ -5,15 +5,13 @@ config:
     launch_sxga:
       file: ycam3sxga.launch
     launch_rsock:
-      file: melfa.launch
-#      file: melfa_rv4f.launch
-      address: "192.168.221.239"
+      file: melfa_rv4f.launch
   rsocket:
     port: 10002
     update_frame_id: tool0_controller
 
 melfa_driver:
-  robot_ip: 192.168.221.10
+  robot_ip: 192.168.221.239
 
 config_tf:
   base:
