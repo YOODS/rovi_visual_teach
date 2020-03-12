@@ -1,6 +1,48 @@
-# VT-20.01 Release Note
+# VT Release Note
 
-## 2020.01
+## 20.04
+
+- 固定カメラとの共用
+
+|Package|File|Description|Origin|
+|:----|:----|:----|:----|
+|rovi_visual_teach|conf.d/config.yaml|VT共通Config|config.yaml|
+| |conf.d/hand_eye.yaml|ハンドアイ用のTF設定|config.yamlから分割|
+| |conf.d/world_eye.yaml|固定カメラ用のTF設定|config.yamlから分割|
+| |launch/start.launch|オプションmount:=worldにて固定カメラ用のTFに切り替え|
+
+- 安川ロボット関連
+
+|Package|File|Description|Origin|
+|:----|:----|:----|:----|
+|rovi_industrial|motoman/motoPlus/VT.out|ツール選択に依らずTool0を送信|
+|rovi_industrial|motoman/urdf/hc10.xacro|ROS-IのURDFをラップ（world-base_linkなど）するURDF||
+|rovi_industrial|hc10.launch|↑に伴う修正|〃|
+
+- 三菱ロボット関連
+
+|Package|File|Description|Origin|
+|:----|:----|:----|:----|
+|rovi_industrial|melfa/urdf|TorkのURDFをラップするURDF||
+|rovi_industrial|melfa_rv4f.launch|RV4F用launchファイル||
+
+- rovi_utils
+
+|Package|File|Description|Origin|
+|:----|:----|:----|:----|
+|rovi|src/*/rcalib_solver|leastsq引数を変更,<br> ftol=0.000001追加<br> 初期値を[0,0,0,0,0,0]に変更||
+＊要 numpy>1.15
+
+- rovi
+
+|Package|File|Description|Origin|
+|:----|:----|:----|:----|
+|rovi|script/ycamctl,notifier|PS時の最新パラメタ反映||
+|rovi|script/ycamctl,ycam3s|新FW対応準備||
+
+<hr>
+
+## 20.01
 
 ### rovi_utils
 
@@ -51,22 +93,6 @@ fitness以上のもので最もカメラに近いものを選択
 
 <hr>
 
-### 20.02での変更(案)
-- rovi_industrial
-    - Frame名称の統一  
-    tool0_controller: コントローラから送信されたツール0座標
-    - TF-treeの構成統一  
-    mountのparentはtool0_controller
-- ransac_solver
-    - feature matching繰り返し数のパラメータ化
-- cropper
-    - R-Crop中心をプロジェクタ光軸中心に変更
-    - Issue#33のYCAM側対応も同時に必要
-- camera_aravis
-    - 0.60→0.64にアップデート
-    - rovi/Install.shの変更
-
-<hr>
 
 ### Appendix(A) レシピのparam.yaml変更手順  
 #### param.yaml実例
