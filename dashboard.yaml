@@ -45,6 +45,7 @@ config:
       label: "セットアップ"
       package: rovi_visual_teach
       file: setup.launch
+      auto: 9
     launch_viewer:
       label: "Viewer"
       package: rovi_visual_teach
