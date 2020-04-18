@@ -26,7 +26,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: PointCloud(Scene)
 Toolbars:
   toolButtonStyle: 2
 Visualization Manager:
@@ -207,10 +207,10 @@ Visualization Manager:
           Value: true
         camera/capture0:
           Value: false
+        camera/capture0/solve0:
+          Value: true
         camera/master0:
           Value: false
-        camera/master0/axis:
-          Value: true
         flange:
           Value: false
         mount:
@@ -234,10 +234,10 @@ Visualization Manager:
               flange:
                 {}
           camera/capture0:
-            {}
-          camera/master0:
-            camera/master0/axis:
+            camera/capture0/solve0:
               {}
+          camera/master0:
+            {}
       Update Interval: 0
       Value: true
     - Alpha: 1
@@ -278,7 +278,7 @@ Visualization Manager:
       Position Transformer: XYZ
       Queue Size: 10
       Selectable: true
-      Size (Pixels): 3
+      Size (Pixels): 2
       Size (m): 0.00999999978
       Style: Points
       Topic: /rovi/ps_pc
@@ -311,7 +311,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 443.594025
+      Distance: 404.812866
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1

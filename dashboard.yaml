@@ -18,11 +18,11 @@ config:
       label: "カメラドライバ(VGA)"
       package: rovi
       confirm: True
+      auto: 1
     launch_sxga:
       label: "カメラドライバ(SXGA)"
       package: rovi
       confirm: True
-      auto: 1
     launch_rsock:
       label: "ロボットドライバ"
       package: rovi_industrial
