@@ -1,10 +1,8 @@
 cropper:
   cropR: 0
-  cropR2: 0.08
   cropZ: 0
   ladC: 0
   ladW: 0
-  ladW2: 30000
   mesh: 1
   nfmin: 0
   nfrad: 5
@@ -32,10 +30,10 @@ rovi:
       Mode: 1
 searcher:
   distance_threshold: 20
-  feature_mesh: 2
-  feature_radius: 5
+  feature_mesh: 3
+  feature_radius: 7
   icp_threshold: 1
   normal_min_nn: 5
-  normal_radius: 3
+  normal_radius: 4
   repeat: 5
   rotate: 3

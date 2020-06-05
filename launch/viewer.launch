@@ -17,4 +17,7 @@
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc1" />
   </node>
+  <node pkg="rtk_tools" type="report.py" name="">
+    <remap from="/report/update" to="/request/solve" />
+  </node>
 </launch>

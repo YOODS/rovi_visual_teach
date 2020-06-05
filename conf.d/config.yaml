@@ -21,6 +21,12 @@ config:
   picker:
     multiplex: 1
     solve_frame_id: "camera/capture0"
+  report:
+    "altitude": -25
+    "rows": 4
+    recipe: /dashboard/recipe
+    keys: ["fitness","rmse","azimuth","rotation","Tx","Ty","Tz","tfeat","tmatch"]
+    labels: ["Fitness","RMSE","Azimuth","Rotation","Shift X","Shift Y","Shift Z","Tfeat","Tmatch"]
   rsocket:
     base_frame_id: base
     source_frame_id: camera/master0
