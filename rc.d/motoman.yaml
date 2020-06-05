@@ -1,9 +1,9 @@
 config:
   dashboard:
     launch_vga:
-      file: ycam3vga_m.launch
+      file: ycam3vga.launch
     launch_sxga:
-      file: ycam3sxga_m.launch
+      file: ycam3sxga.launch
     launch_rsock:
       file: hc10.launch
   rsocket:
