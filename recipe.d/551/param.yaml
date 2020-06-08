@@ -1,0 +1,39 @@
+cropper:
+  cropR: 0
+  cropZ: 0
+  ladC: 0
+  ladW: 0
+  mesh: 1
+  nfmin: 10
+  nfrad: 5
+picker:
+  azimuth:
+    max: 1
+    min: 0
+  fitness:
+    max: 1
+    min: 0.66
+  rmse:
+    max: 5
+    min: 0
+rovi:
+  live:
+    camera:
+      ExposureTime: 30000
+      Gain: 50
+  pshift_genpc:
+    camera:
+      ExposureTime: 8400
+      Gain: 0
+    projector:
+      Intensity: 100
+      Mode: 1
+searcher:
+  distance_threshold: 20
+  feature_mesh: 2
+  feature_radius: 7
+  icp_threshold: 1
+  normal_min_nn: 0
+  normal_radius: 5
+  repeat: 2
+  rotate: 2
