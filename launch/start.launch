@@ -3,7 +3,7 @@
   <rosparam command="load" file="$(find rovi_visual_teach)/dashboard.yaml" />
   <rosparam command="load" file="$(find rovi_visual_teach)/conf.d/config.yaml" />
   <rosparam command="load" file="$(find rovi_visual_teach)/conf.d/$(arg mount)_eye.yaml" />
-  <node pkg="rtk_tools" type="dashboard.py" name="" output="screen">
+  <node pkg="rtk_tools" type="dashboard.py" required="true" name="" output="screen">
     <remap from="~load" to="/request/recipe_load" />
     <remap from="~loaded" to="/request/model_load" />
     <remap from="~failed" to="/response/recipe_load" />

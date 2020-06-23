@@ -5,13 +5,12 @@ config:
     launch_sxga:
       file: ycam3sxga.launch
     launch_rsock:
-      file: dummy.launch
+      file: mz07.launch
   rsocket:
-    reverse_frame_id: mount
+    robot_port: 11000
+    robot_ip: 192.168.221.30
+    port: 3333
     update_frame_id: tool0_controller
+    reverse_frame_id: mount
+    reverse_direction: -1
 
-config_tf:
-  base:
-    parent_frame_id: world
-  mount:
-    parent_frame_id: base

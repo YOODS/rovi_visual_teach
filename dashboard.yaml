@@ -1,6 +1,6 @@
 config:
   dashboard:
-    load: rovi_visual_teach/rc.d/motoman.yaml
+    load: rovi_visual_teach/rc.d/dummy.yaml
     recipe:
       link: rovi_visual_teach/recipe
       dir: rovi_visual_teach/recipe.d
@@ -45,6 +45,7 @@ config:
       label: "セットアップ"
       package: rovi_visual_teach
       file: setup.launch
+      auto: 9
     launch_viewer:
       label: "Viewer"
       package: rovi_visual_teach

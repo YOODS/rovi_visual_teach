@@ -2,17 +2,17 @@ cropper:
   cropR: 0
   cropZ: 0
   ladC: 0
-  ladW: 40000
-  mesh: 0.001
+  ladW: 0
+  mesh: 2
   nfmin: 0
-  nfrad: 0.005
+  nfrad: 5
 picker:
   azimuth:
     max: 1
     min: 0
   fitness:
     max: 1
-    min: 0.85
+    min: 0.7
   rmse:
     max: 5
     min: 0
@@ -26,14 +26,14 @@ rovi:
       ExposureTime: 8400
       Gain: 0
     projector:
-      Intensity: 250
+      Intensity: 80
       Mode: 1
 searcher:
-  distance_threshold: 0.002
-  feature_mesh: 0.004
-  feature_radius: 0.005
-  icp_threshold: 0.001
-  normal_min_nn: 0
-  normal_radius: 0.002
-  repeat: 5
-  rotate: 0
+  distance_threshold: 20
+  feature_mesh: 1
+  feature_radius: 7
+  icp_threshold: 2
+  normal_min_nn: 5
+  normal_radius: 5
+  repeat: 2
+  rotate: 3
