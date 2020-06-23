@@ -12,5 +12,5 @@ config:
     port: 3333
     update_frame_id: tool0_controller
     reverse_frame_id: mount
-    reverse_direction: 1
+    reverse_direction: -1
 
