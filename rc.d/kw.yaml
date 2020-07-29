@@ -12,5 +12,7 @@ config:
 
 config_tf:
   base:
-    parent_frame_id: world
+    parent_frame_id: world  #In stead of URDF
+  flange:
+    parent_frame_id: tool0_controller
 

@@ -2,8 +2,13 @@ config_tf:
   camera:
     parent_frame_id: mount
   flange:
-    parent_frame_id: tool0_controller
-  mount:
     parent_frame_id: tool0
+  mount:
+    parent_frame_id: "flange"
   tool0_controller:
     parent_frame_id: base
+
+config:
+  cropper:
+    base_frame_id: world
+

@@ -1,17 +1,12 @@
 config:
   dashboard:
     launch_vga:
-      file: ycam3vga.launch
+      file: dummy.launch
     launch_sxga:
-      file: ycam3sxga.launch
+      file: dummy.launch
     launch_rsock:
       file: dummy.launch
   rsocket:
     reverse_frame_id: mount
     update_frame_id: tool0_controller
 
-config_tf:
-  base:
-    parent_frame_id: world
-  mount:
-    parent_frame_id: base

@@ -12,9 +12,3 @@ config:
     robot_ip: 192.168.221.239
     robot_port: [12000,12001]
 
-config_tf:
-  mount:
-    parent_frame_id: tool0
-  base:
-    parent_frame_id: world
-
