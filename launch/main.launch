@@ -13,6 +13,7 @@
     <remap from="~capture" to="/request/capture" />
     <remap from="~captured" to="/response/capture" />
     <remap from="~clear" to="/request/clear" />
+    <remap from="~redraw" to="/request/redraw" />
     <remap from="~in/floats" to="/rovi/ps_floats" />
     <remap from="~out/floats" to="/scene/surface/floats" />
     <remap from="~raw/floats" to="/scene/surface/raw/floats" />

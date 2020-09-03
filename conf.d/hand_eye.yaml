@@ -4,7 +4,7 @@ config_tf:
   flange:
     parent_frame_id: tool0
   mount:
-    parent_frame_id: "flange"
+    parent_frame_id: flange
   tool0_controller:
     parent_frame_id: base
 

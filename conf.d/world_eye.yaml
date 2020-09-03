@@ -11,4 +11,7 @@ config_tf:
 config:
   cropper:
     base_frame_id: flange
+  rsocket:
+    base_frame_id: flange
+
 

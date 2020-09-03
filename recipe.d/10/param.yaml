@@ -1,11 +1,13 @@
 cropper:
-  cropR: 0.3
-  cropZ: 1.0
+  cropR: 0
+  cropR2: 0.08
+  cropZ: 0
   ladC: 0
   ladW: 6000
-  mesh: 0.001
+  ladW2: 30000
+  mesh: 0.5
   nfmin: 0
-  nfrad: 0.005
+  nfrad: 0
 picker:
   azimuth:
     max: 1
@@ -18,22 +20,15 @@ picker:
     min: 0
 rovi:
   live:
-    camera:
-      ExposureTime: 300000
-      Gain: 63
+    paramsetN: 1
   pshift_genpc:
-    camera:
-      ExposureTime: 8400
-      Gain: 0
-    projector:
-      Intensity: 150
-      Mode: 1
+    paramsetN: 1
 searcher:
-  distance_threshold: 0.1
-  feature_mesh: 0.004
-  feature_radius: 0.03
-  icp_threshold: 0.005
+  distance_threshold: 1
+  feature_mesh: 1
+  feature_radius: 3
+  icp_threshold: 0.5
   normal_min_nn: 0
-  normal_radius: 0.01
+  normal_radius: 3
   repeat: 5
   rotate: 0
