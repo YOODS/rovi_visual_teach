@@ -9,6 +9,6 @@
     <remap from="~failed" to="/response/recipe_load" />
   </node>
   <node pkg="rovi_utils" type="paramset.py" name="" args="
-    set:=[/rovi/live,/rovi/pshift_genpc]"
+    set:=[/rovi/live,/rovi/pshift_genpc,/cropper]"
   />
 </launch>
