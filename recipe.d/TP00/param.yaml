@@ -20,9 +20,12 @@ picker:
     min: 0
 rovi:
   live:
-    paramsetN: 1
+    camera:
+      ExposureTime: 30000
   pshift_genpc:
     paramsetN: 1
+    projector:
+      Intensity: 120
 searcher:
   distance_threshold: 2
   feature_mesh: 4
