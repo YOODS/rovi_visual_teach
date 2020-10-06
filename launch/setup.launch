@@ -1,6 +1,6 @@
 <launch>
   <node pkg="rtk_tools" type="panel.py" name="" args="
-    conf:=$(find rovi_visual_teach)/setup.zui
-    dump:=$(find rovi_visual_teach)/recipe/param.yaml geom:=300x700-0+20"
+    conf:=$(find rovi_visual_teach)/setupV2.zui
+    dump:=$(find rovi_visual_teach)/recipe/param.yaml geom:=360x800-0+20"
   />
 </launch>

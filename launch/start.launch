@@ -8,7 +8,7 @@
     <remap from="~loaded" to="/request/model_load" />
     <remap from="~failed" to="/response/recipe_load" />
   </node>
-  <node pkg="rovi_utils" type="paramset.py" name="" args="
-    set:=[/rovi/live,/rovi/pshift_genpc]"
+  <node pkg="rovi_utils" type="paramset.py" name="" output="screen" args="
+    set:=[/rovi/pshift_genpc]"
   />
 </launch>
