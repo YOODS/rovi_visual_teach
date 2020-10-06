@@ -19,7 +19,7 @@
 "class":"Popup",  "name":"/response/model_save","label":"マスター登録"
 "class":"Pub",    "name":"/request/redraw","label":"再描画"
 
-"class":"Title",  "label":"4.解析エンジン","page":"break"
+"class":"Title",  "label":"4.解析エンジン"
 "class":"Number", "name":"/searcher/rotate","label":"回転対称数"
 "class":"Number", "name":"/searcher/repeat","label":"特徴点マッチング繰返し数"
 "class":"Number", "name":"/searcher/normal_radius","label":"法線決定半径"
