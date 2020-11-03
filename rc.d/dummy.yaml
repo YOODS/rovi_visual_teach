@@ -5,7 +5,7 @@ config:
     launch_sxga:
       file: dummy.launch
     launch_rsock:
-      file: dummy.launch
+      file: mz07.launch
   rsocket:
     reverse_frame_id: mount
     update_frame_id: tool0_controller
