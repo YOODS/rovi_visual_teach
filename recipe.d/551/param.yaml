@@ -26,7 +26,15 @@ rovi:
     paramsetN: 1
     projector:
       Intensity: 120
+  ycam:
+    ExposureTimeLevel: 4
+    projector:
+      Intensity: 255
 searcher:
+  cutter:
+    base: -97
+    offset: 180
+    width: 2.5
   distance_threshold: 20
   feature_mesh: 2
   feature_radius: 7
