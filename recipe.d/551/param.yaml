@@ -3,18 +3,18 @@ cropper:
   cropR2: 0.08
   cropZ: 0
   ladC: 0
-  ladW: 0
+  ladW: 30000
   ladW2: 30000
-  mesh: 1
-  nfmin: 10
+  mesh: 2
+  nfmin: 20
   nfrad: 5
 picker:
   azimuth:
-    max: 1
+    max: 0.19
     min: 0
   fitness:
     max: 1
-    min: 0.66
+    min: 0.7
   rmse:
     max: 5
     min: 0
@@ -35,11 +35,11 @@ searcher:
     base: -97
     offset: 180
     width: 2.5
-  distance_threshold: 20
-  feature_mesh: 2
-  feature_radius: 7
-  icp_threshold: 1
-  normal_min_nn: 0
-  normal_radius: 5
-  repeat: 2
-  rotate: 2
+  distance_threshold: 100
+  feature_mesh: 4
+  feature_radius: 18
+  icp_threshold: 3
+  normal_min_nn: 5
+  normal_radius: 8
+  repeat: 1
+  rotate: 0
