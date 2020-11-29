@@ -14,7 +14,7 @@ config:
     update_frame_id: tool0_controller
     robot_ip: 192.168.221.239
     robot_port: [12000,12001]
-    preproc: "rosrun rovi_industrial revolve.py"
+    post: "rosrun rovi_industrial revolve.py"
     target_frame_id: camera/capture0/solve0/revolve
 #    reverse_frame_id: mount
 #    reverse_direction: -1
