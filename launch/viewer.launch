@@ -21,4 +21,7 @@
     <remap from="/report/update" to="/request/capture" />
     <remap from="/report/complete" to="/response/solve" />
   </node>
+  <node pkg="rviz_tools_py" type="cutter.py" name="" output="screen">
+    <param name="/cutter/refs" type="str" value="/searcher/cutter" />
+  </node>
 </launch>
