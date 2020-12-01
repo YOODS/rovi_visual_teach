@@ -5,15 +5,16 @@ config:
     launch_sxga:
       file: dummy.launch
     launch_rsock:
-      file: melfa_rv4fl.launch
+      file: hc10dt.launch
   rsocket:
     reverse_frame_id: mount
     update_frame_id: tool0_controller
-  rsocket:
-    port: 10002
+    robot_port: 11000
+    robot_ip: 192.168.221.10
+    port: 3333
     update_frame_id: tool0_controller
-    robot_ip: 192.168.221.239
-    robot_port: [12000,12001]
+    reverse_frame_id: mount
+    reverse_direction: 1
     post: "rosrun rovi_industrial revolve.py"
     target_frame_id: camera/capture0/solve0/revolve
 #    reverse_frame_id: mount

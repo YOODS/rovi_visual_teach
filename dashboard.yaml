@@ -38,14 +38,17 @@ config:
     launch_rcalib:
       label: "キャリブレーション"
       package: rovi_utils
-      file: rcalib.launch
+      file: rcalibV2.launch
+      pre: "x-tile 1"
+      post: "x-tile 2"
       args:
         result: rovi_visual_teach/rcalib.yaml
     launch_setup:
       label: "セットアップ"
       package: rovi_visual_teach
       file: setup.launch
-      auto: 9
+      pre: "x-tile 1"
+      post: "x-tile 2"
     launch_viewer:
       label: "Viewer"
       package: rovi_visual_teach
@@ -72,3 +75,5 @@ config:
   panel:
     color:
       background: "#00AAFF"
+    lift: false
+
