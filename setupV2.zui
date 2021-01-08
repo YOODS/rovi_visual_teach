@@ -1,6 +1,7 @@
 "class":"Title",  "label":"1.カメラ調整"
 "class":"Number", "name":"/rovi/ycam/Mode","label":"モード[1:運転,2:調整]"
 "class":"Number", "name":"/rovi/ycam/ExposureTimeLevel","label":"露光レベル[1:基本,2:2倍,3:3倍,4:4倍]"
+"class":"Number", "name":"/rovi/ycam/camera/Gain","label":"デジタルゲイン[0〜100]"
 "class":"Number", "name":"/rovi/ycam/projector/Intensity","label":"プロジェクタ発光強度[0〜255]"
 "class":"Number", "name":"/rovi/ycam/Strobe","label":"ストロボ[0:OFF,1:ON])"
 "class":"Pub",    "name":"/request/capture","label":"3Dスキャン","data":".data=True"
