@@ -54,7 +54,9 @@
     <remap from="~solved" to="/response/solve" />
     <remap from="~redraw" to="/request/redraw" />
   </node>
+<!--
   <node pkg="rovi_utils" type="adjuster.py" name="" output="screen">
     <remap from="~solve" to="/response/capture" />
   </node>
+-->
 </launch>

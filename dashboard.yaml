@@ -1,12 +1,12 @@
 config:
   dashboard:
-    load: rovi_visual_teach/rc.d/dummy.yaml
+    load: rovi_visual_teach/rc.d/nachi.yaml
     recipe:
       link: rovi_visual_teach/recipe
       dir: rovi_visual_teach/recipe.d
     altitude: '+0'
     message:
-      halt: "プログラムを停止します"
+      halt: "を停止します"
     font:
       size: 10
     color:
@@ -62,11 +62,16 @@ config:
       type: std_msgs/Bool
       timeout: 2
     indicator2:
+      label: "接続"
+      topic: /rsocket/enable
+      type: std_msgs/Bool
+      timeout: 2
+    indicator3:
       label: "通信"
       topic: /rsocket/stat
       type: std_msgs/Bool
       timeout: 2
-    indicator3:
+    indicator4:
       label: "解析"
       topic: /searcher/stat
       type: std_msgs/Bool
