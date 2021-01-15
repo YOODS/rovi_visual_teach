@@ -12,8 +12,8 @@ config:
     color:
       background: "#00AAFF"
       lit: "#FF7700"
-      unlit: "#000000"
-      mask: "#555555"
+      unlit: "#888888"
+      mask: "#222222"
     launch_vga:
       label: "カメラドライバ(VGA)"
       package: rovi
