@@ -21,16 +21,24 @@ config:
   picker:
     multiplex: 1
     solve_frame_id: "camera/capture0"
+    reference_frame_id: "solve_check"
+    base_frame_id: "base"
   report:
     "altitude": -25
     "width": 1920
     "rows": 4
-    recipe: /dashboard/recipe
+    recipe: "/dashboard/recipe"
     keys: ["pcount","fitness","rmse","azimuth","rotation","transX","transY","transZ","tcap","tfeat","tmatch"]
     labels: ["点数","一致度","平均誤差","傾き","回転","経由点X","経由点Y","経由点Z","撮影処理時間","特徴処理時間","マッチング処理時間"]
   rsocket:
-    base_frame_id: base
-    source_frame_id: camera/master0
-    target_frame_id: camera/capture0/solve0
-    update_frame_id: tool0_controller
+    base_frame_id: "base"
+    source_frame_id: "camera/master0"
+    target_frame_id: "camera/capture0/solve0"
+    update_frame_id: "tool0_controller"
+    check_frame_id: "solve_check"
+    post: ""
+
+config_tf:
+  solve_check:
+    parent_frame_id: "camera/master0"
 
