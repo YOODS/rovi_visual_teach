@@ -34,17 +34,14 @@
     <remap from="~score" to="/searcher/score" />
     <remap from="~stat" to="/searcher/stat" />
   </node>
-<!--
-  <node pkg="rovi_utils" type="searcher.py" name="searcher1" args="path:=$(find rovi_visual_teach)/recipe" output="screen">
-    <remap from="~config" to="/config/searcher1" />
+  <node pkg="rovi_utils" type="mesh_aid.py" name="mesh_aid" args="path:=$(find rovi_visual_teach)/recipe" output="screen">
+    <remap from="~create" to="/request/mesh_create" />
+    <remap from="~clear" to="/request/mesh_clear" />
+    <remap from="~test" to="/request/mesh_test" />
+    <remap from="~config" to="/config/searcher0" />
     <remap from="~param" to="/searcher" />
-    <remap from="~in/surface/floats" to="/scene/surface/floats" />
-    <remap from="~clear" to="/request/clear" />
-    <remap from="~load" to="/request/model_load" />
-    <remap from="~solve" to="/request/solve" />
-    <remap from="~score" to="/searcher/score" />
+    <remap from="~preset" to="/request/mesh_param_preset" />
   </node>
--->
   <node pkg="rovi_utils" type="picker.py" name="" output="screen">
     <remap from="~config" to="/config/picker" />
     <remap from="~param" to="/picker" />
