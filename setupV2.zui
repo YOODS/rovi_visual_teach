@@ -51,4 +51,5 @@
 "class":"Number", "name":"/config/rsocket/robot_port","label":"ロボットポート"
 "class":"Pub",    "name":"/rsocket/ping","label":"PING"
 "class":"Title",  "label":"99.その他"
+"class":"Pub",    "name":"/report/dump","label":"レポート保存"
 "class":"Pub",    "name":"/shutdown","label":"終了","confirm":"終了しますか？"
