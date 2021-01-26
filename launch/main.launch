@@ -35,11 +35,12 @@
     <remap from="~stat" to="/searcher/stat" />
   </node>
   <node pkg="rovi_utils" type="mesh_aid.py" name="mesh_aid" args="path:=$(find rovi_visual_teach)/recipe" output="screen">
+    <remap from="~config" to="/config/searcher0" />
+    <remap from="~solver_param" to="/searcher" />
+    <remap from="~param" to="/mesh_aid" />
     <remap from="~create" to="/request/mesh_create" />
     <remap from="~clear" to="/request/mesh_clear" />
     <remap from="~test" to="/request/mesh_test" />
-    <remap from="~config" to="/config/searcher0" />
-    <remap from="~param" to="/searcher" />
     <remap from="~preset" to="/request/mesh_param_preset" />
   </node>
   <node pkg="rovi_utils" type="picker.py" name="" output="screen">
