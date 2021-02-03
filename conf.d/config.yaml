@@ -21,7 +21,7 @@ config:
   picker:
     multiplex: 1
     solve_frame_id: "camera/capture0"
-    reference_frame_id: "base"
+    reference_frame_id: "camera/capture0"
     base_frame_id: "base"
   report:
     "altitude": -25
