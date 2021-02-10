@@ -35,7 +35,6 @@
 "class":"Number", "name":"/searcher/cutter/distance","label":"ジャーナル切出距離(mm)"
 "class":"Number", "name":"/searcher/cutter/base","label":"ジャーナル切出位置(mm)"
 "class":"Number", "name":"/searcher/cutter/offset","label":"ジャーナル第2切出オフセット(mm)"
-"class":"Number", "name":"/searcher/cutter/arg","label":"ジャーナル偏角(deg)"
 "class":"Title",  "label":"6.解析エンジン(上級者向け)"
 "class":"Text", "name":"/rsocket/post","label":"ポストプロセッサ"
 "class":"Number", "name":"/searcher/repeat","label":"特徴点マッチング繰返し数"
@@ -44,6 +43,10 @@
 "class":"Number", "name":"/searcher/feature_radius","label":"特徴点決定半径"
 "class":"Number", "name":"/searcher/distance_threshold","label":"対応特徴点最大距離"
 "class":"Number", "name":"/searcher/icp_threshold","label":"ICP有効点距離"
+"class":"Title",  "label":"7.解析シミュレーション"
+"class":"Number", "name":"/mesh_aid/mesh_size","label":"メッシュサイズ"
+"class":"Pub",    "name":"/mesh_aid/create","label":"シーン合成"
+"class":"Pub",    "name":"/request/solve","label":"解析"
 
 "class":"Title",  "label":"90.ネットワーク設定","page":"break"
 "class":"Number", "name":"/config/rsocket/port","label":"ポート"
