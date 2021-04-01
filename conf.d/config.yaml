@@ -28,8 +28,8 @@ config:
     "width": 1920
     "rows": 4
     recipe: "/dashboard/recipe"
-    keys: ["pcount","fitness","rmse","azimuth","rotation","transX","transY","transZ","tcap","tfeat","tmatch"]
-    labels: ["点数","一致度","平均誤差","傾き","回転","経由点X","経由点Y","経由点Z","撮影処理時間","特徴処理時間","マッチング処理時間"]
+    keys: ["pcount","fitness","rmse","azimuth","rotation","transX","transY","transZ","tcap","tfeat","tmatch","error"]
+    labels: ["点数","一致度","平均誤差","傾き","回転","経由点X","経由点Y","経由点Z","撮影処理時間","特徴処理時間","マッチング処理時間","エラー"]
   rsocket:
     base_frame_id: "base"
     source_frame_id: "camera/master0"

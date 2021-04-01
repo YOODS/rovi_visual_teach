@@ -1,6 +1,8 @@
 config:
   dashboard:
+#    load: rovi_visual_teach/rc.d/dummy.yaml
     load: rovi_visual_teach/rc.d/nachi.yaml
+#    load: rovi_visual_teach/rc.d/motoman.yaml
     recipe:
       link: rovi_visual_teach/recipe
       dir: rovi_visual_teach/recipe.d
@@ -18,11 +20,15 @@ config:
       label: "カメラドライバ(VGA)"
       package: rovi
       confirm: True
+      pre: "devantech_usb_relay_2ch_comm.py -1 1"
+      post: "devantech_usb_relay_2ch_comm.py -1 0"
       auto: 1
     launch_sxga:
       label: "カメラドライバ(SXGA)"
       package: rovi
       confirm: True
+      pre: "devantech_usb_relay_2ch_comm.py -1 1"
+      post: "devantech_usb_relay_2ch_comm.py -1 0"
     launch_rsock:
       label: "ロボットドライバ"
       package: rovi_industrial
@@ -38,7 +44,7 @@ config:
     launch_rcalib:
       label: "キャリブレーション"
       package: rovi_utils
-      file: rcalibV2.launch
+      file: rcalib.launch
       pre: "x-tile 1"
       post: "x-tile 2"
       args:

@@ -5,6 +5,11 @@
     <remap from="floats" to="/scene/surface/floats" />
     <remap from="pc" to="/scene/surface/pc" />
   </node>
+  <node pkg="rovi_utils" type="image_hack.py" name="">
+    <remap from="~image_in1" to="/rovi/left/image_rect" />
+    <remap from="~image_in2" to="/gridboard/image_out" />
+    <remap from="~image_out" to="/rovi/left/image_rect_mix" />
+  </node>
   <node pkg="rovi" type="floats2pc" name="" args="camera/master0">
     <remap from="floats" to="/master/surface/floats" />
     <remap from="pc" to="/master/surface/pc" />
