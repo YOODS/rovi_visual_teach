@@ -38,11 +38,9 @@
     <remap from="~config" to="/config/searcher0" />
     <remap from="~solver_param" to="/searcher" />
     <remap from="~param" to="/mesh_aid" />
-    <remap from="~create" to="/mesh_aid/create" />
-    <remap from="~clear" to="/mesh_aid/clear" />
-    <remap from="~redraw" to="/request/redraw" />
     <remap from="~preset" to="/mesh_aid/preset" />
   </node>
+-->
   <node pkg="rovi_utils" type="picker.py" name="" output="screen">
     <remap from="~config" to="/config/picker" />
     <remap from="~param" to="/picker" />
