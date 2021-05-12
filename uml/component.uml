@@ -1,0 +1,20 @@
+@startuml
+component [cropper]
+component [searcher]
+component [picker]
+component [r_socket]
+component [rovi]
+component [r_socket]
+component [robot]
+component [camera]
+
+camera <-up-> rovi : GigE
+rovi <-up-> cropper
+cropper -right-> searcher
+searcher -right-> picker
+r_socket -up-> cropper : /request/capture
+r_socket -up-> searcher : /request/solve
+r_socket <-up- picker : /response/solve
+r_socket <-down-> robot : X0..3
+camera -right- robot
+@enduml
