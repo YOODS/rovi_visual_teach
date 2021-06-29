@@ -38,6 +38,11 @@ rovi:
       Gain: 80
     projector:
       Intensity: 255
+    hdr: 
+      enabled: false
+      pcgen_publish: false
+      projector:
+        Intensity: 0.2
 searcher:
   cutter:
     base: 0
