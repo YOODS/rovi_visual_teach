@@ -3,6 +3,8 @@ config:
 #    load: rovi_visual_teach/rc.d/dummy.yaml
     load: rovi_visual_teach/rc.d/nachi.yaml
 #    load: rovi_visual_teach/rc.d/motoman.yaml
+#    load: rovi_visual_teach/rc.d/motoman_J6.yaml
+#    load: rovi_visual_teach/rc.d/kw.yaml
     recipe:
       link: rovi_visual_teach/recipe
       dir: rovi_visual_teach/recipe.d
@@ -45,22 +47,30 @@ config:
       label: "キャリブレーション"
       package: rovi_utils
       file: rcalib.launch
-      pre: "x-tile 1"
-      post: "x-tile 2"
+      pre: "wmctrl -r rviz -e 0,0,0,1557,920"
+      post: "wmctrl -r rviz -e 0,0,0,1920,920"
       args:
         result: rovi_visual_teach/rcalib.yaml
     launch_setup:
       label: "セットアップ"
       package: rovi_visual_teach
       file: setup.launch
-      pre: "x-tile 1"
-      post: "x-tile 2"
+      pre: "wmctrl -r rviz -e 0,0,0,1557,920"
+      post: "wmctrl -r rviz -e 0,0,0,1920,920"
     launch_viewer:
       label: "Viewer"
       package: rovi_visual_teach
       file: viewer.launch
       confirm: True
       auto: 10
+    launch_tracer:
+      label: "トレーサー"
+      package: rovi_utils
+      file: tracer.launch
+      pre: "wmctrl -r rviz -e 0,0,0,1557,920"
+      post: "wmctrl -r rviz -e 0,0,0,1920,920"
+      args:
+        result: rovi_visual_teach/rcalib.yaml
 
     indicator1:
       label: "YCAM"
