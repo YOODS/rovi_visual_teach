@@ -77,8 +77,17 @@ WD=500でのソルブ結果は以下のような表示となる
 ![solve](https://user-images.githubusercontent.com/5061483/124724091-a55d6c00-df46-11eb-9fb6-ff2aac64dec9.png)
 新しいTF(camera/capture0/wd)が対象物あたりに来るように、Viewerを見ながらWDの値を調整する。これによって物体の移動量を出力する。
 
-6. conf.d/config.yaml  
-レポートに移動量を表示するため以下変更
+6. setupV2.zui  
+WDを入力するためにパネルに項目を追加。
+~~~
+"class":"Title",  "label":"3.解析チェック"
+"class":"Number", "name":"/picker/wd","label":"カメラ距離"
+"class":"Pub",    "name":"/request/solve","label":"解析"
+~~~
+解析ボタンの上に「カメラ距離」という項目を追加しましたが、そもそもそこだろうか？(名称も微妙)
+
+7. conf.d/config.yaml  
+最後にレポートに移動量を表示するため以下変更
 ~~~
   report:
     "altitude": -25
