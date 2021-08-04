@@ -2,7 +2,7 @@
 
 CATKIN_WS=${PWD%src*}
 
-source /opt/ros/kinetic/setup.bash
+source /opt/ros/noetic/setup.bash
 source $CATKIN_WS/devel/setup.bash
 
 #installing aravis library
@@ -45,30 +45,26 @@ pip install scipy --user
 pip install wheel --user
 pip install ipython==5.7 --user
 pip install ipykernel==4.10 --user
-pip install open3d-python --user
-
-#installing X-Tile
-cd ~
-git clone https://github.com/YOODS/x-tile.git
-cd x-tile
-./create_debian_package.sh
-cd ..
-sudo dpkg -i x-tile_3.3-0_all.deb
+pip install open3d --user
 
 #checkout rovi
 cd $CATKIN_WS/src
-git clone -b devel https://github.com/YOODS/rovi.git
+git clone -b noetic https://github.com/YOODS/rovi.git
 
 #checkout rovi_utils
 cd $CATKIN_WS/src
-git clone -b devel https://github.com/YOODS/rovi_utils.git
+git clone -b noetic-devel https://github.com/YOODS/rovi_utils.git
 
 #checkout rovi_industrial
 cd $CATKIN_WS/src
-git clone -b dev2101 https://github.com/YOODS/rovi_industrial.git
+git clone -b noetic-devel https://github.com/YOODS/rovi_industrial.git
 
 #checkout rtk_tools
 cd $CATKIN_WS/src
-git clone -b dev2101 https://github.com/YOODS/rtk_tools.git
+git clone -b noetic-devel https://github.com/YOODS/rtk_tools.git
 sudo apt install python-tk
 pip install tkfilebrowser --user
+
+#checkout rviz_tools
+cd $CATKIN_WS/src
+git clone -b noetic-devel https://github.com/YOODS/rviz_tools_py.git
