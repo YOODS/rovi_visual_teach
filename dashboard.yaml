@@ -1,10 +1,11 @@
 config:
   dashboard:
 #    load: rovi_visual_teach/rc.d/dummy.yaml
-    load: rovi_visual_teach/rc.d/nachi.yaml
+#    load: rovi_visual_teach/rc.d/nachi.yaml
 #    load: rovi_visual_teach/rc.d/motoman.yaml
 #    load: rovi_visual_teach/rc.d/motoman_J6.yaml
 #    load: rovi_visual_teach/rc.d/kw.yaml
+    load: rovi_visual_teach/rc.d/std.yaml
     recipe:
       link: rovi_visual_teach/recipe
       dir: rovi_visual_teach/recipe.d
@@ -21,20 +22,17 @@ config:
     launch_vga:
       label: "カメラドライバ(VGA)"
       package: rovi
-      confirm: True
       pre: "devantech_usb_relay_2ch_comm.py -1 1"
       post: "devantech_usb_relay_2ch_comm.py -1 0"
       auto: 1
     launch_sxga:
       label: "カメラドライバ(SXGA)"
       package: rovi
-      confirm: True
       pre: "devantech_usb_relay_2ch_comm.py -1 1"
       post: "devantech_usb_relay_2ch_comm.py -1 0"
     launch_rsock:
-      label: "ロボットドライバ"
+      label: "ロボット通信"
       package: rovi_industrial
-      confirm: True
       auto: 6
       args:
         address: "111.222.333.444"
@@ -47,30 +45,21 @@ config:
       label: "キャリブレーション"
       package: rovi_utils
       file: rcalib.launch
-      pre: "wmctrl -r rviz -e 0,0,0,1557,920"
-      post: "wmctrl -r rviz -e 0,0,0,1920,920"
+      pre: "wmctrl -r rviz -e 0,0,0,1550,875"
+      post: "wmctrl -r rviz -e 0,0,0,1920,875"
       args:
         result: rovi_visual_teach/rcalib.yaml
     launch_setup:
       label: "セットアップ"
       package: rovi_visual_teach
       file: setup.launch
-      pre: "wmctrl -r rviz -e 0,0,0,1557,920"
-      post: "wmctrl -r rviz -e 0,0,0,1920,920"
+      pre: "wmctrl -r rviz -e 0,0,0,1550,875"
+      post: "wmctrl -r rviz -e 0,0,0,1920,875"
     launch_viewer:
-      label: "Viewer"
+      label: "ビューア"
       package: rovi_visual_teach
       file: viewer.launch
-      confirm: True
       auto: 10
-    launch_tracer:
-      label: "トレーサー"
-      package: rovi_utils
-      file: tracer.launch
-      pre: "wmctrl -r rviz -e 0,0,0,1557,920"
-      post: "wmctrl -r rviz -e 0,0,0,1920,920"
-      args:
-        result: rovi_visual_teach/rcalib.yaml
 
     indicator1:
       label: "YCAM"

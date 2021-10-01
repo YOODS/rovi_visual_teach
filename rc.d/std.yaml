@@ -1,0 +1,18 @@
+config:
+  dashboard:
+    launch_vga:
+      file: ycam3vga.launch
+    launch_sxga:
+      file: ycam3sxga.launch
+    launch_rsock:
+      file: std.launch
+  rsocket:
+    port: 8888
+    update_frame_id: tool0_controller
+
+config_tf:
+  base:
+    parent_frame_id: world  #In stead of URDF
+  flange:
+    parent_frame_id: tool0_controller
+
