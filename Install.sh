@@ -38,14 +38,10 @@ npm install terminate --save
 npm install ping
 
 #installing python package
-sudo apt install python-pip
-pip install pip==9.0.3
-pip install numpy==1.15.0 --user
+sudo apt install python3-pip
+cd /usr/bin; sudo ln -fs python3 python; cd ~
 pip install scipy --user
-pip install wheel --user
-pip install ipython==5.7 --user
-pip install ipykernel==4.10 --user
-pip install open3d --user
+pip install open3d==0.11.1 --user
 
 #checkout rovi
 cd $CATKIN_WS/src
@@ -64,6 +60,7 @@ cd $CATKIN_WS/src
 git clone -b noetic-devel https://github.com/YOODS/rtk_tools.git
 sudo apt install python-tk
 pip install tkfilebrowser --user
+pip install pymsgbox --user
 
 #checkout rviz_tools
 cd $CATKIN_WS/src
