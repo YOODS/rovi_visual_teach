@@ -8,11 +8,6 @@ config:
       file: kw.launch
   rsocket:
     port: 8888
+    robot_port: 9999
+    robot_ip: 172.31.16.251
     update_frame_id: tool0_controller
-
-config_tf:
-  base:
-    parent_frame_id: world  #In stead of URDF
-  flange:
-    parent_frame_id: tool0_controller
-
